@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_left"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/spr_bg_detail_untilities"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dp10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ll_right"
+        app:layout_constraintHeight_percent="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.47">
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp5"
+            android:text="GIA SƯ TRỰC TUYẾN"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_detail_untilities"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_depcrition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp5"
+            android:gravity="center"
+            android:text="Mô tả: "
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_detail_untilities" />
+
+        <TextView
+            android:id="@+id/txt_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nhà cung cấp: "
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_detail_untilities"
+            android:textStyle="bold|italic" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_right"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/spr_bg_detail_untilities"
+        android:orientation="vertical"
+        android:padding="@dimen/dp10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.85"
+        app:layout_constraintStart_toEndOf="@id/ll_left"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.47">
+
+        <RelativeLayout
+            android:id="@+id/btn_call"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/dp10"
+            android:background="@drawable/spr_bg_phone_detail_untility"
+            app:layout_constraintBottom_toTopOf="@+id/txt_price"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.9" />
+
+        <ImageView
+            android:id="@+id/icon_phone"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/dp5"
+            android:src="@drawable/animation_call_icon"
+            app:layout_constraintBottom_toBottomOf="@id/btn_call"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintHeight_percent="0.14"
+            app:layout_constraintStart_toStartOf="@id/btn_call"
+            app:layout_constraintTop_toTopOf="@id/btn_call">
+
+        </ImageView>
+
+        <TextView
+
+            android:id="@+id/txt_phone_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_detail_untilities"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/btn_call"
+            app:layout_constraintEnd_toEndOf="@id/btn_call"
+            app:layout_constraintStart_toEndOf="@id/icon_phone"
+            app:layout_constraintTop_toTopOf="@id/btn_call" />
+
+        <TextView
+            android:id="@+id/txt_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp5"
+            android:gravity="center"
+            android:text="Cước gọi: 1000đ/phút"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_detail_untilities"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp2"
+            android:gravity="center"
+            android:text="Time: "
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_detail_untilities"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_price" />
+
+        <Button
+            android:id="@+id/btn_exit"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@drawable/spr_button_red_click"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Đóng"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_detail_untilities"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_time"
+            app:layout_constraintWidth_percent="0.4" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

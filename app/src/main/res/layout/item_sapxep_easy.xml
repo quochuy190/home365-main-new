@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_item_sapxep"
+    android:layout_width="@dimen/width_item_easy"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin_item_kow_easy">
+    <TextView
+        android:fontFamily="@font/aclonica_regular"
+        android:background="@drawable/img_menu_toan"
+        android:id="@+id/txt_content"
+        android:layout_width="@dimen/width_item_easy"
+        android:layout_height="@dimen/width_item_easy"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="i"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_kow_easy" />
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <Button
+        android:id="@+id/btn_start_hard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/spr_button_red_click"
+        android:fontFamily="@font/roboto_bold"
+        android:onClick="start_activity"
+        android:text="HARD"
+        android:textColor="@color/white"
+        android:textSize="@dimen/kow_txt_btn_start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_start_normal"
+        app:layout_constraintWidth_percent="0.28" />
+
+    <Button
+        android:id="@+id/btn_start_normal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/spr_button_oragen_click"
+        android:fontFamily="@font/roboto_bold"
+        android:onClick="start_activity_normal"
+        android:text="NORMAL"
+        android:textColor="@color/white"
+        android:textSize="@dimen/kow_txt_btn_start"
+        app:layout_constraintBottom_toTopOf="@id/btn_start_hard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_start_easy"
+        app:layout_constraintWidth_percent="0.28" />
+
+    <Button
+        android:id="@+id/btn_start_easy"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:background="@drawable/spr_button_blue_click"
+        android:fontFamily="@font/roboto_bold"
+        android:onClick="start_activity_easy"
+        android:text="EASY"
+        android:textColor="@color/white"
+        android:textSize="@dimen/kow_txt_btn_start"
+        app:layout_constraintBottom_toTopOf="@+id/btn_start_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintWidth_percent="0.28" />
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="@dimen/item_back_kow"
+        android:layout_height="@dimen/item_back_kow"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+
+        android:src="@drawable/ic_back_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="@dimen/item_back_kow"
+        android:layout_height="@dimen/item_back_kow"
+        android:layout_margin="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/img_mute"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

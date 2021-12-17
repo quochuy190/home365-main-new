@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/img_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_start_exercises" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.88" />
+    <ImageView
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintHeight_percent="0.1"
+        android:visibility="visible"
+        android:id="@+id/img_mute"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="10dp"
+
+        android:src="@drawable/ic_back_menu"
+        app:layout_constraintEnd_toStartOf="@id/txt_lable_mon"
+        app:layout_constraintTop_toTopOf="@id/gl_1" />
+
+    <ImageView
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintHeight_percent="0.1"
+        android:visibility="visible"
+        android:id="@+id/img_mute_all"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+
+        android:src="@drawable/img_mute"
+        app:layout_constraintStart_toEndOf="@id/txt_lable_mon"
+        app:layout_constraintTop_toTopOf="@id/gl_1"  />
+    <TextView
+        android:fontFamily="@font/roboto_bold"
+        app:layout_constraintTop_toTopOf="@+id/gl_1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/img_mute"
+        android:id="@+id/txt_lable_mon"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="BÀI TẬP TOÁN"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_title_start_exer"
+        android:textStyle="bold" />
+    <TextView
+        android:fontFamily="@font/roboto_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_lable_mon"
+        android:id="@+id/txt_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lớp 2 - Tuần 3"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_app" />
+
+    <LinearLayout
+        app:layout_constraintWidth_percent="0.7"
+        android:id="@+id/linear_text_center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/btn_active"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_subject">
+        <TextView
+            android:layout_margin="@dimen/dp5"
+            android:gravity="center"
+            android:id="@+id/txt_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp5"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_app" />
+        <TextView
+            android:layout_margin="@dimen/dp5"
+            android:gravity="center"
+            android:id="@+id/txt_introduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp5"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_app" />
+
+    </LinearLayout>
+    <EditText
+        android:inputType="number"
+        android:imeOptions="actionDone"
+        android:id="@+id/edt_code_active"
+        android:visibility="gone"
+        android:padding="@dimen/dp15"
+        android:textSize="@dimen/txt_app"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:hint="Nhập mã kích hoạt"
+        android:background="@drawable/spr_edt_kow_level_two"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_subject"
+        app:layout_constraintBottom_toTopOf="@id/btn_active"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_marginBottom="@dimen/dp7"
+        android:id="@+id/btn_active"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/spr_orange_click"
+        android:fontFamily="@font/font1"
+        android:scaleType="fitXY"
+        android:text="Kích hoạt"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_txt_content_guild_login"
+        app:layout_constraintBottom_toBottomOf="@id/gl_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.3" />
+</androidx.constraintlayout.widget.ConstraintLayout>

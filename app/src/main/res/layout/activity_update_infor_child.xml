@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/bg_untilities"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/orange"
+                android:layout_marginTop="@dimen/dp10"
+                android:src="@drawable/icon_avata"
+                android:id="@+id/img_avata_update"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:padding="@dimen/dp5"
+                android:scaleType="centerCrop"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_mute"
+                app:layout_constraintWidth_percent="0.23" />
+
+            <ImageView
+                android:tint="@color/orange"
+                android:id="@+id/img_get_image"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/camera"
+                app:layout_constraintBottom_toBottomOf="@id/img_avata_update"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="@id/img_avata_update"
+                app:layout_constraintWidth_percent="0.05" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="@dimen/dp5"
+                android:id="@+id/txt_input_city"
+                android:background="@drawable/spr_login_edt"
+                android:padding="@dimen/dp3"
+                app:layout_constraintWidth_percent="0.7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_avata_update"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:theme="@style/TextLabel">
+
+                <EditText
+                    android:textSize="@dimen/text_size_update_infor_child"
+                    android:id="@+id/edt_city_addsub"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint="Tỉnh/thành phố"
+                    android:inputType="text"
+                    android:padding="@dimen/dp2"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <ImageView
+                android:id="@+id/img_city"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_input_city"
+                app:layout_constraintTop_toTopOf="@+id/txt_input_city"
+                app:layout_constraintEnd_toEndOf="@id/txt_input_city"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_down"
+                android:tint="@color/red_test365" />
+            <View
+                android:layout_marginTop="@dimen/dp3"
+                android:layout_marginBottom="@dimen/dp3"
+                android:background="@color/red_test365"
+                app:layout_constraintTop_toTopOf="@id/img_city"
+                app:layout_constraintBottom_toBottomOf="@id/img_city"
+                app:layout_constraintStart_toStartOf="@id/img_city"
+                android:layout_width="1dp"
+                android:layout_height="0dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="@dimen/margin_top_update_infor_child"
+                android:id="@+id/txt_input_district"
+                android:background="@drawable/spr_login_edt"
+                android:padding="@dimen/dp3"
+                app:layout_constraintWidth_percent="0.7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_input_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:theme="@style/TextLabel">
+
+                <EditText
+                    android:textSize="@dimen/text_size_update_infor_child"
+                    android:id="@+id/edt_district"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint="Quận/Huyện"
+                    android:inputType="text"
+                    android:padding="@dimen/dp2"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <ImageView
+                android:id="@+id/img_district"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_input_district"
+                app:layout_constraintTop_toTopOf="@+id/txt_input_district"
+                app:layout_constraintEnd_toEndOf="@id/txt_input_district"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_down"
+                android:tint="@color/red_test365" />
+            <View
+                android:layout_marginTop="@dimen/dp3"
+                android:layout_marginBottom="@dimen/dp3"
+                android:background="@color/red_test365"
+                app:layout_constraintTop_toTopOf="@id/img_district"
+                app:layout_constraintBottom_toBottomOf="@id/img_district"
+                app:layout_constraintStart_toStartOf="@id/img_district"
+                android:layout_width="1dp"
+                android:layout_height="0dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="@dimen/margin_top_update_infor_child"
+                android:id="@+id/txt_input_school"
+                android:background="@drawable/spr_login_edt"
+                android:padding="@dimen/dp3"
+                app:layout_constraintWidth_percent="0.7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_input_district"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:theme="@style/TextLabel">
+
+                <EditText
+                    android:textSize="@dimen/text_size_update_infor_child"
+                    android:id="@+id/edt_school"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint="Chọn trường"
+                    android:inputType="text"
+                    android:padding="@dimen/dp2"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <ImageView
+                android:id="@+id/img_school"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_input_school"
+                app:layout_constraintTop_toTopOf="@+id/txt_input_school"
+                app:layout_constraintEnd_toEndOf="@id/txt_input_school"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_down"
+                android:tint="@color/red_test365" />
+            <View
+                android:layout_marginTop="@dimen/dp3"
+                android:layout_marginBottom="@dimen/dp3"
+                android:background="@color/red_test365"
+                app:layout_constraintTop_toTopOf="@id/img_school"
+                app:layout_constraintBottom_toBottomOf="@id/img_school"
+                app:layout_constraintStart_toStartOf="@id/img_school"
+                android:layout_width="1dp"
+                android:layout_height="0dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="@dimen/margin_top_update_infor_child"
+                android:id="@+id/txt_input_level_id"
+                android:background="@drawable/spr_login_edt"
+                android:padding="@dimen/dp3"
+                android:layout_marginRight="@dimen/dp7"
+                app:layout_constraintStart_toStartOf="@id/txt_input_school"
+                app:layout_constraintEnd_toStartOf="@id/txt_input_class_name"
+                app:layout_constraintTop_toBottomOf="@id/txt_input_school"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:theme="@style/TextLabel">
+
+                <EditText
+                    android:textSize="@dimen/text_size_update_infor_child"
+                    android:id="@+id/edt_level_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint="Khối học"
+                    android:inputType="text"
+                    android:padding="@dimen/dp2"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <ImageView
+                android:id="@+id/img_level_id"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_input_level_id"
+                app:layout_constraintTop_toTopOf="@+id/txt_input_level_id"
+                app:layout_constraintEnd_toEndOf="@id/txt_input_level_id"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_down"
+                android:tint="@color/red_test365" />
+            <View
+                android:layout_marginTop="@dimen/dp3"
+                android:layout_marginBottom="@dimen/dp3"
+                android:background="@color/red_test365"
+                app:layout_constraintTop_toTopOf="@id/img_level_id"
+                app:layout_constraintBottom_toBottomOf="@id/img_level_id"
+                app:layout_constraintStart_toStartOf="@id/img_level_id"
+                android:layout_width="1dp"
+                android:layout_height="0dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="@dimen/margin_top_update_infor_child"
+                android:id="@+id/txt_input_class_name"
+                android:background="@drawable/spr_login_edt"
+                android:padding="@dimen/dp3"
+                android:layout_marginLeft="@dimen/dp7"
+                app:layout_constraintStart_toEndOf="@id/txt_input_level_id"
+                app:layout_constraintEnd_toEndOf="@id/txt_input_school"
+                app:layout_constraintTop_toBottomOf="@id/txt_input_school"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:theme="@style/TextLabel">
+
+                <EditText
+                    android:imeOptions="flagNoFullscreen|actionNext"
+                    android:textSize="@dimen/text_size_update_infor_child"
+                    android:id="@+id/edt_class_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="Tên lớp"
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/dp2"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:visibility="gone"
+                android:clickable="false"
+                android:layout_marginTop="@dimen/margin_top_update_infor_child"
+                android:id="@+id/txt_input_username"
+                android:background="@drawable/spr_login_edt"
+                android:padding="@dimen/dp3"
+                app:layout_constraintWidth_percent="0.7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_input_level_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:theme="@style/TextLabel">
+
+                <TextView
+                    android:clickable="false"
+                    android:imeOptions="flagNoFullscreen|actionNext"
+                    android:textSize="@dimen/text_size_update_infor_child"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="Mã học sinh"
+                    android:inputType="text"
+                    android:padding="@dimen/dp2"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="@dimen/margin_top_update_infor_child"
+                android:id="@+id/txt_input_full_name"
+                android:background="@drawable/spr_login_edt"
+                android:padding="@dimen/dp3"
+                app:layout_constraintWidth_percent="0.7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_input_username"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:theme="@style/TextLabel">
+
+                <EditText
+                    android:imeOptions="flagNoFullscreen|actionNext"
+                    android:textSize="@dimen/text_size_update_infor_child"
+                    android:id="@+id/edt_full_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="Họ và tên"
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/dp2"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt_input_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/margin_top_update_infor_child"
+                android:background="@drawable/spr_login_edt"
+                android:padding="@dimen/dp3"
+                android:theme="@style/TextLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_input_full_name"
+                app:layout_constraintWidth_percent="0.7">
+
+                <EditText
+                    android:id="@+id/edt_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="Số điện thoại (tuỳ chọn)"
+                    android:imeOptions="flagNoFullscreen|actionNext"
+                    android:inputType="none"
+                    android:padding="@dimen/dp2"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="@dimen/text_size_update_infor_child" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="@dimen/margin_top_update_infor_child"
+                android:id="@+id/txt_input_email"
+                android:background="@drawable/spr_login_edt"
+                android:padding="@dimen/dp3"
+                app:layout_constraintWidth_percent="0.7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_input_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:theme="@style/TextLabel">
+
+                <EditText
+                    android:imeOptions="flagNoFullscreen|actionDone"
+                    android:textSize="@dimen/text_size_update_infor_child"
+                    android:id="@+id/edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="Email (tuỳ chọn)"
+                    android:inputType="text"
+                    android:padding="@dimen/dp2"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                app:layout_constraintHeight_percent="0.08"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintWidth_percent="0.25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_input_email"
+                android:id="@+id/btn_ok_add_sub"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp10"
+                android:layout_weight="1"
+                android:background="@drawable/spr_orange_click"
+                android:text="Cập nhật"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_18sp" />
+            <ImageView
+                android:visibility="visible"
+                android:id="@+id/img_back"
+                android:layout_width="@dimen/height_keyboard_sudoku"
+                android:layout_height="@dimen/height_keyboard_sudoku"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="@dimen/dp5"
+                android:src="@drawable/ic_back_menu"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/edt_username"
+                android:textAllCaps="true"
+                android:fontFamily="@font/roboto_bold"
+                android:text="MÃ HS: "
+                android:textSize="@dimen/txt_name_exer"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@drawable/spr_title_menu_exer"
+                app:layout_constraintWidth_percent="0.8"
+                app:layout_constraintStart_toEndOf="@id/img_back"
+                app:layout_constraintTop_toTopOf="@id/img_back"
+                app:layout_constraintBottom_toBottomOf="@+id/img_back"
+                app:layout_constraintEnd_toStartOf="@id/img_mute"
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
+
+            <ImageView
+                android:visibility="visible"
+                android:id="@+id/img_mute"
+                android:layout_width="@dimen/height_keyboard_sudoku"
+                android:layout_height="@dimen/height_keyboard_sudoku"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="@dimen/dp5"
+                android:src="@drawable/img_mute"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

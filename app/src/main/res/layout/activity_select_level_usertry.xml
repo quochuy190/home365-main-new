@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline2"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/spr_title_menu_exer"
+        android:fontFamily="@font/font1"
+        android:gravity="center"
+        android:text="Mời bạn chọn lớp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_title_try"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <Button
+        android:id="@+id/btn_level_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/img_menu_toan"
+        android:fontFamily="@font/font1"
+        android:text="Lớp 1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_size_level"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio=" 1:1"
+        app:layout_constraintEnd_toStartOf="@id/btn_level_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title"
+        app:layout_constraintWidth_percent="0.14" />
+
+    <Button
+        android:id="@+id/btn_level_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/img_menu_blue"
+        android:fontFamily="@font/font1"
+        android:text="Lớp 2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_size_level"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio=" 1:1"
+        app:layout_constraintEnd_toStartOf="@+id/btn_level_3"
+        app:layout_constraintStart_toEndOf="@id/btn_level_1"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title"
+        app:layout_constraintWidth_percent="0.14" />
+
+    <Button
+        android:id="@+id/btn_level_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/img_menu_tim"
+        android:fontFamily="@font/font1"
+        android:text="Lớp 3"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_size_level"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio=" 1:1"
+        app:layout_constraintEnd_toStartOf="@+id/btn_level_4"
+        app:layout_constraintStart_toEndOf="@id/btn_level_2"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title"
+        app:layout_constraintWidth_percent="0.14" />
+
+    <Button
+        android:id="@+id/btn_level_4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/img_menu_green"
+        android:fontFamily="@font/font1"
+        android:text="Lớp 4"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_size_level"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio=" 1:1"
+        app:layout_constraintEnd_toStartOf="@+id/btn_level_5"
+        app:layout_constraintStart_toEndOf="@id/btn_level_3"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title"
+        app:layout_constraintWidth_percent="0.14" />
+
+    <Button
+        android:id="@+id/btn_level_5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/img_menu_red"
+        android:fontFamily="@font/font1"
+        android:text="Lớp 5"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_size_level"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio=" 1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_level_4"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title"
+        app:layout_constraintWidth_percent="0.14" />
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="@dimen/item_back_kow"
+        android:layout_height="@dimen/item_back_kow"
+        android:layout_margin="@dimen/dp7"
+        android:src="@drawable/ic_back_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/img_mute"
+        android:layout_width="@dimen/item_back_kow"
+        android:layout_height="@dimen/item_back_kow"
+        android:layout_margin="@dimen/dp7"
+        android:src="@drawable/img_mute"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

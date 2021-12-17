@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp3"
+    android:background="@color/white"
+
+    android:orientation="vertical">
+
+    <TextView
+        android:textAllCaps="true"
+        android:id="@+id/txt_title_objservice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp5"
+        android:paddingTop="@dimen/dp5"
+        android:paddingBottom="@dimen/dp2"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/blue_theme_game_kow"
+        android:textSize="@dimen/text_welcom"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_lis_objservice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"></androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>

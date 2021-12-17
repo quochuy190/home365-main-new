@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+
+        android:id="@+id/imageView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_top_login"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.77"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.75"
+
+        />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/icon_login_bumbble"
+        app:layout_constraintEnd_toStartOf="@+id/gl_hozi_4"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintWidth_percent="0.18"
+        app:layout_goneMarginTop="@dimen/dp10" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/icon_login_buterfly"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintStart_toStartOf="@+id/gl_hozi_3"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/icon_girl_login"
+        android:visibility="visible"
+        app:layout_constraintHeight_percent="0.35"
+        app:layout_constraintStart_toStartOf="@+id/gl_hozi_6"
+        app:layout_constraintTop_toTopOf="@+id/gl_ver_2"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_goneMarginTop="@dimen/dp15" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_hozi_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.26" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_hozi_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.74" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_hozi_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.76" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_hozi_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.78" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_hozi_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.22" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_ver_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.17" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_ver_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_txt_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.74209243" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/spr_login_edt"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout3"
+        app:layout_constraintEnd_toEndOf="@id/gl_hozi_2"
+        app:layout_constraintHeight_percent="0.115"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/gl_hozi_1"
+        app:layout_constraintTop_toTopOf="@+id/gl_ver_1">
+
+        <ImageView
+            android:id="@+id/img_user_con"
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp5"
+            android:padding="@dimen/dp5"
+            android:src="@drawable/icon_username" />
+
+        <EditText
+            android:id="@+id/edt_user_con"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp5"
+            android:layout_toRightOf="@id/img_user_con"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            android:hint="Số điện thoại"
+            android:imeOptions="flagNoFullscreen|actionDone"
+            android:inputType="number"
+            android:padding="@dimen/dp7"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/text_login" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/spr_login_edt"
+        app:layout_constraintBottom_toTopOf="@+id/gl_ver_2"
+        app:layout_constraintEnd_toEndOf="@id/gl_hozi_2"
+        app:layout_constraintHeight_percent="0.115"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/gl_hozi_1"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
+
+        <ImageView
+            android:id="@+id/img_user_pass"
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp5"
+            android:padding="@dimen/dp5"
+            android:src="@drawable/icon_password" />
+
+        <EditText
+            android:id="@+id/edt_user_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp5"
+            android:layout_toRightOf="@id/img_user_pass"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            android:hint="Mật khẩu"
+            android:imeOptions="flagNoFullscreen|actionDone"
+            android:inputType="textPassword"
+            android:padding="@dimen/dp7"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/text_login" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/img_dangnhap"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/spr_button_blue_click"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Đăng nhập"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_login"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_try"
+        app:layout_constraintEnd_toEndOf="@+id/gl_hozi_3"
+        app:layout_constraintEnd_toStartOf="@+id/imageView17"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_try"
+        app:layout_constraintTop_toTopOf="@+id/btn_try"
+        app:layout_constraintWidth_percent="0.24" />
+
+    <Button
+        android:id="@+id/btn_try"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/spr_button_oragen_click"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Tạo tài khoản mới"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img_dangnhap"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/gl_hozi_4"
+        app:layout_constraintTop_toTopOf="@+id/gl_ver_2"
+        app:layout_constraintWidth_percent="0.24" />
+
+    <ImageView
+        android:id="@+id/img_mute"
+        android:layout_width="@dimen/dp40"
+        android:layout_height="@dimen/dp40"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/img_mute"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_hotline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp5"
+        android:background="@drawable/spr_click_textview"
+        android:padding="@dimen/dp5"
+        android:text="Quên mật khẩu"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_login"
+        android:textStyle="bold|italic"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_try" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

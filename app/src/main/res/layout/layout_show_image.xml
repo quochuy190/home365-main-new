@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:paddingTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/info_vip" />
+
+        <ImageView
+            android:id="@+id/ic_close_info_vip"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_show"
+            app:layout_constraintEnd_toEndOf="@+id/img_show"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/img_show"
+            app:layout_constraintTop_toTopOf="@+id/img_show"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/close_info_vip" />
+
+        <Button
+            android:id="@+id/button_logout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="96dp"
+            android:layout_marginEnd="96dp"
+            android:background="@drawable/spr_button_red_click"
+            android:fontFamily="@font/font1"
+            android:text="Đăng xuất"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_txt_content_guild_login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="8:1"
+            app:layout_constraintEnd_toEndOf="@+id/img_show"
+            app:layout_constraintStart_toStartOf="@+id/img_show"
+            app:layout_constraintTop_toTopOf="@+id/img_show"
+            app:layout_constraintVertical_bias="0.94" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

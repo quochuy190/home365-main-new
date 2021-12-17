@@ -1,0 +1,214 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="dp55">55dp</dimen>
+    <dimen name="height_bottombar">50dp</dimen>
+    <dimen name="height_appbar">45dp</dimen>
+    <dimen name="image_avata">100dp</dimen>
+    <!--size magin-->
+    <dimen name="dp1">1dp</dimen>
+    <dimen name="dp2">2dp</dimen>
+    <dimen name="dp3">3dp</dimen>
+    <dimen name="dp5">5dp</dimen>
+    <dimen name="dp7">7dp</dimen>
+    <dimen name="dp10">10dp</dimen>
+    <dimen name="dp15">15dp</dimen>
+    <dimen name="dp20">20dp</dimen>
+    <dimen name="dp25">25dp</dimen>
+    <dimen name="dp30">30dp</dimen>
+    <dimen name="dp35">35dp</dimen>
+    <dimen name="dp40">40dp</dimen>
+    <dimen name="dp45">45dp</dimen>
+    <dimen name="dp50">50dp</dimen>
+    <dimen name="dp70">70dp</dimen>
+    <dimen name="dp80">80dp</dimen>
+    <dimen name="dp60">60dp</dimen>
+    <dimen name="dp100">100dp</dimen>
+    <dimen name="dp120">120dp</dimen>
+    <dimen name="dp130">130dp</dimen>
+    <dimen name="dp150">150dp</dimen>
+    <dimen name="dp180">180dp</dimen>
+    <dimen name="dp200">200dp</dimen>
+    <dimen name="dp250">250dp</dimen>
+    <dimen name="dp350">350dp</dimen>
+    <!--  margin login-->
+    <dimen name="pading_edt_login">2dp</dimen>
+    <dimen name="margin_top_edt">35dp</dimen>
+    <dimen name="margin_edt_login">75dp</dimen>
+    <dimen name="margin_top_login">30dp</dimen>
+    <dimen name="login_width">400dp</dimen>
+    <dimen name="text_login">16sp</dimen>
+    <!--<layout menu làm bài tập-->
+    <dimen name="hight_btn_login">40dp</dimen>
+    <dimen name="margin_btn_bottom_login">10dp</dimen>
+    <dimen name="margin_edt_top_login">5dp</dimen>
+    <dimen name="margin_mute_lambai">45dp</dimen>
+    <dimen name="width_item_menu">80dp</dimen>
+    <dimen name="margin_item">6dp</dimen>
+    <dimen name="txt_menu_baitap">14sp</dimen>
+    <!--activity làm bài tập-->
+    <dimen name="text_content_cauhoi">17sp</dimen>
+    <dimen name="image_next">40dp</dimen>
+    <dimen name="margin_top_lambai">10dp</dimen>
+    <dimen name="margin_left_lambai">45dp</dimen>
+    <dimen name="icon_point_lambai">45dp</dimen>
+    <!--text size-->
+    <dimen name="text_10sp">10sp</dimen>
+    <dimen name="text_11sp">11sp</dimen>
+    <dimen name="text_12sp">12sp</dimen>
+    <dimen name="text_13sp">13sp</dimen>
+    <dimen name="text_14sp">14sp</dimen>
+    <dimen name="text_15sp">15sp</dimen>
+    <dimen name="text_16sp">16sp</dimen>
+    <dimen name="text_17sp">17sp</dimen>
+    <dimen name="text_18sp">18sp</dimen>
+    <dimen name="text_20sp">20sp</dimen>
+    <dimen name="text_25sp">25sp</dimen>
+    <dimen name="text_30sp">30sp</dimen>
+    <dimen name="width_item_objservice">210dp</dimen>
+    <dimen name="height_item_objservice">125dp</dimen>
+
+    <dimen name="img_avata_feedback">30dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_time_flight">25dp</dimen>
+    <dimen name="img_avata_airline_flight">60dp</dimen>
+    <dimen name="margin_flight">5dp</dimen>
+
+    <!--xếp trứng margin-->
+    <dimen name="width_egg">140dp</dimen>
+    <dimen name="hight_egg">100dp</dimen>
+    <dimen name="margin_egg_2">145dp</dimen>
+    <dimen name="margin_egg_3">290dp</dimen>
+    <dimen name="margin_egg_4">435dp</dimen>
+    <dimen name="txt_xeptrung">17sp</dimen>
+    <dimen name="hight_egg_dapan">130dp</dimen>
+    <dimen name="pading_egg">15dp</dimen>
+    <!--view chào mừng-->
+    <dimen name="hight_img_chaomung">90dp</dimen>
+    <dimen name="margin_top_chaomung">10dp</dimen>
+    <dimen name="text_content_chaomung">18sp</dimen>
+    <!--giải cứu công chúa-->
+    <dimen name="item_congchua">80dp</dimen>
+    <dimen name="item_dapan">145dp</dimen>
+    <!--Bài tập tuần đã làm-->
+    <dimen name="item_baitaptuan_dalam">95dp</dimen>
+    <!--Exercises Detail-->
+    <dimen name="exercises_hight_title">45dp</dimen>
+    <dimen name="exercises_margin_leght">15dp</dimen>
+    <dimen name="exercises_icon_point">40dp</dimen>
+    <dimen name="exer_hight_debai">40dp</dimen>
+    <dimen name="exer_margin_top">5dp</dimen>
+    <dimen name="exer_margin_left_text_lable">10dp</dimen>
+    <dimen name="exer_width_sticker">70dp</dimen>
+    <dimen name="icon_back_exercises">40dp</dimen>
+    <!--Game-->
+    <dimen name="pading_button_menu">20dp</dimen>
+    <dimen name="text_menu_game">15sp</dimen>
+    <dimen name="icon_center_tptt">210dp</dimen>
+    <dimen name="icon_btn_play">80dp</dimen>
+    <dimen name="margin_btn_play">22dp</dimen>
+    <dimen name="icon_left_game_teacher">170dp</dimen>
+    <dimen name="btn_start_game">45dp</dimen>
+    <!--  Game : Triệu phú tri thức-->
+    <dimen name="width_right_menu_game">150dp</dimen>
+    <dimen name="icon_support">40dp</dimen>
+    <dimen name="text_sp_tptt">12sp</dimen>
+    <dimen name="icon_time">50dp</dimen>
+    <dimen name="margin_question">50dp</dimen>
+    <dimen name="margin_anwser_game">25dp</dimen>
+    <dimen name="text_time_game_tptt">14sp</dimen>
+    <!--  Biểu đồ-->
+    <dimen name="margin_bottom_bieudo">70dp</dimen>
+    <dimen name="margin_right_bieudo">60dp</dimen>
+    <dimen name="width_bxh">120dp</dimen>
+    <dimen name="hight_item_bottom">70dp</dimen>
+    <!--Chém chuối-->
+    <dimen name="img_chemchuoi">120dp</dimen>
+    <dimen name="icon_anwser_review">60dp</dimen>
+    <!--Đọc và trả lời-->
+    <dimen name="margin_top_baidoc">25dp</dimen>
+    <dimen name="margin_left_baidoc">20dp</dimen>
+    <!--Bảng xếp hạng-->
+    <dimen name="icon_stt_bxh">45dp</dimen>
+    <!--Chỉnh sửa bắt sâu-->
+    <dimen name="btn_showpoint_width">150dp</dimen>
+    <dimen name="btn_showpoint_hight">30dp</dimen>
+    <dimen name="txt_showpoint">15sp</dimen>
+    <!--Game tính nhanh nhớ lâu-->
+    <dimen name="hight_point_time_tnnl">60dp</dimen>
+    <dimen name="icon_time_game_tnnl">50dp</dimen>
+    <dimen name="txt_player_tnnl">15sp</dimen>
+    <dimen name="icon_point_tnnl">27dp</dimen>
+    <dimen name="margin_right_start_tnnl">40dp</dimen>
+    <dimen name="margin_top_start_tnnl">40dp</dimen>
+    <dimen name="pading_show_question">15dp</dimen>
+    <dimen name="margin_show_question_bang">5dp</dimen>
+    <dimen name="margin_content_broad">15dp</dimen>
+    <dimen name="width_txt_tnnl">350dp</dimen>
+    <dimen name="height_txt_tnnl">100dp</dimen>
+
+    <dimen name="btn_level_game_width">120dp</dimen>
+    <dimen name="btn_level_game_height">40dp</dimen>
+    <dimen name="btn_level_game_margin_top">40dp</dimen>
+    <dimen name="height_view_level_game_tnnl">190dp</dimen>
+    <dimen name="btn_level_font">15sp</dimen>
+    <dimen name="text_welcom">17sp</dimen>
+    <!--Menu_login-->
+    <dimen name="width_logo">220dp</dimen>
+    <dimen name="height_logo">70dp</dimen>
+    <dimen name="margin_list_user">90dp</dimen>
+    <dimen name="text_lable_lambai">19sp</dimen>
+    <!--Xem lại bài tập-->
+    <dimen name="txt_lable_exer">20sp</dimen>
+    <dimen name="img_avata_home">45dp</dimen>
+    <dimen name="margin_webview_baidoc">30dp</dimen>
+    <!--Game King of word-->
+    <dimen name="kow_width_btn_start">190dp</dimen>
+    <dimen name="kow_height_btn_start">40dp</dimen>
+    <dimen name="kow_txt_btn_start">17sp</dimen>
+    <dimen name="kow_btnstart_margin_bottom">20dp</dimen>
+    <dimen name="kow_width_menu_level">80dp</dimen>
+    <dimen name="kow_height_menu_level">100dp</dimen>
+    <dimen name="kow_menu_level_margin_left_guild">9dp</dimen>
+    <dimen name="kow_menu_level_margin_bottom_guild">17sp</dimen>
+    <dimen name="kow_txt_menu_level">16sp</dimen>
+
+    <dimen name="kow_height_theme_title">45dp</dimen>
+    <dimen name="kow_margin_top_playgame">8dp</dimen>
+    <dimen name="kow_height_text_theme">30dp</dimen>
+    <dimen name="kow_title_theme_gamekow">17sp</dimen>
+    <dimen name="margin_kow_chucai">10dp</dimen>
+    <dimen name="item_chucai_height">45dp</dimen>
+    <dimen name="kow_width_logo_kow">90dp</dimen>
+    <dimen name="item_back_kow">40dp</dimen>
+    <!--Sudoku-->
+    <dimen name="item_sudoku">0.5dp</dimen>
+    <dimen name="item_sector">2.5dp</dimen>
+    <dimen name="pading_sudoku">2.5dp</dimen>
+    <dimen name="txt_value_sudoku">19sp</dimen>
+    <dimen name="txt_sudoku_goiy">17sp</dimen>
+    <dimen name="height_item_sudoku">33dp</dimen>
+    <dimen name="height_keyboard_sudoku">38dp</dimen>
+    <!--Chọn lớp dùng thử-->
+    <dimen name="txt_title_try">21sp</dimen>
+    <dimen name="txt_size_level">17sp</dimen>
+    <!--Hướng dẫn đăng nhập-->
+    <dimen name="size_pading_content_guild_login">7dp</dimen>
+    <dimen name="size_txt_content_guild_login">15sp</dimen>
+    <!--Webview đọc truyện-->
+    <dimen name="txt_title_webview_doctruyen">15sp</dimen>
+    <!--Start làm bài tập-->
+    <dimen name="txt_app">16sp</dimen>
+    <dimen name="txt_name_subject">19sp</dimen>
+    <!--  kow easy game play-->
+    <dimen name="width_item_easy">60dp</dimen>
+    <dimen name="margin_item_kow_easy">2dp</dimen>
+    <dimen name="txt_kow_easy">22sp</dimen>
+
+    <dimen name="margin_item_menu_untility">8dp</dimen>
+    <dimen name="txt_menu_utility_name">12sp</dimen>
+    <dimen name="txt_title_menu_exer">15sp</dimen>
+
+    <dimen name="txt_name_exer">18sp</dimen>
+    <dimen name="txt_exer_content">16sp</dimen>
+    <dimen name="txt_name_home">13sp</dimen>
+</resources>

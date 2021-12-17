@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/img_theme_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/kow_margin_top_playgame"
+        android:scaleType="fitXY"
+        android:src="@drawable/kow_theme_title"
+        app:layout_constraintHeight_percent="0.14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.68" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <ImageView
+        android:layout_width="@dimen/kow_width_logo_kow"
+        android:layout_height="@dimen/kow_width_logo_kow"
+        android:layout_marginTop="@dimen/dp10"
+        android:src="@drawable/kow_logo"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/txt_name_topic" />
+
+    <TextView
+        android:id="@+id/txt_name_topic"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/spr_txt_theme_playgame_kow"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="SPORTS"
+        android:textColor="@color/blue_theme_game_kow"
+        android:textSize="@dimen/kow_title_theme_gamekow"
+        app:layout_constraintBottom_toBottomOf="@+id/img_theme_title"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintLeft_toLeftOf="@+id/img_theme_title"
+        app:layout_constraintRight_toRightOf="@+id/img_theme_title"
+        app:layout_constraintTop_toTopOf="@+id/img_theme_title"
+        app:layout_constraintWidth_percent="0.53" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_list_chucai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_kow_chucai"
+        android:background="@drawable/spr_list_bangchucai"
+        android:padding="@dimen/dp10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"></androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/txt_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aclonica_regular"
+        android:padding="@dimen/dp5"
+        android:textColor="@color/blue_theme_game_kow"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/recycle_list_chucai"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_theme_title" />
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="@dimen/item_back_kow"
+        android:layout_height="@dimen/item_back_kow"
+        android:src="@drawable/ic_back_menu"
+        app:layout_constraintBottom_toBottomOf="@id/img_theme_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/ll_goiy"
+        app:layout_constraintTop_toTopOf="@id/img_theme_title" />
+
+    <RelativeLayout
+        android:id="@+id/ll_goiy"
+        android:layout_width="@dimen/item_back_kow"
+        android:layout_height="@dimen/item_back_kow"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toRightOf="@+id/img_back"
+        app:layout_constraintRight_toLeftOf="@+id/img_theme_title"
+        app:layout_constraintTop_toTopOf="@id/img_mute">
+
+        <ImageView
+            android:layout_width="@dimen/item_back_kow"
+            android:layout_height="@dimen/item_back_kow"
+            android:src="@drawable/ic_guild" />
+
+        <TextView
+            android:id="@+id/txt_goiy_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_15sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_mute"
+        android:layout_width="@dimen/item_back_kow"
+        android:layout_height="@dimen/item_back_kow"
+        android:src="@drawable/img_mute"
+        app:layout_constraintBottom_toBottomOf="@id/img_theme_title"
+        app:layout_constraintLeft_toRightOf="@id/ll_time"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/img_theme_title" />
+
+    <RelativeLayout
+        android:id="@+id/ll_time"
+        android:layout_width="@dimen/item_back_kow"
+        android:layout_height="@dimen/item_back_kow"
+
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toRightOf="@+id/img_theme_title"
+        app:layout_constraintRight_toLeftOf="@+id/img_mute"
+        app:layout_constraintTop_toTopOf="@id/img_mute">
+
+        <ImageView
+            android:id="@+id/img_time"
+            android:layout_width="@dimen/item_back_kow"
+            android:layout_height="@dimen/item_back_kow"
+            android:src="@drawable/icon_game_time" />
+
+        <TextView
+            android:id="@+id/txt_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="02:00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_14sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_show_turn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_game_kow"
+        android:fontFamily="@font/aclonica_regular"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/kow_title_theme_gamekow"
+        android:visibility="gone">
+
+    </TextView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rl_show_anwser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_game_kow"
+        android:visibility="gone">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_center_hori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <ImageView
+            android:id="@+id/img_bg_gameover"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_broad"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <TextView
+            android:id="@+id/img_title_gameover"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/font1"
+            android:gravity="center"
+            android:padding="@dimen/dp20"
+            android:src="@drawable/img_winner"
+            android:text="winner!"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_30sp"
+            app:layout_constraintBottom_toTopOf="@+id/gl_center_hori"
+            app:layout_constraintLeft_toLeftOf="@id/img_bg_gameover"
+            app:layout_constraintRight_toRightOf="@id/img_bg_gameover"
+            app:layout_constraintTop_toTopOf="@id/img_bg_gameover" />
+
+        <TextView
+            android:id="@+id/txt_anwser_newword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/aclonica_regular"
+            android:gravity="center"
+            android:padding="@dimen/dp10"
+            android:text="WHITE"
+            android:textColor="@color/white"
+            android:textSize="@dimen/kow_title_theme_gamekow"
+            app:layout_constraintEnd_toEndOf="@id/img_bg_gameover"
+            app:layout_constraintStart_toStartOf="@id/img_bg_gameover"
+            app:layout_constraintTop_toTopOf="@+id/gl_center_hori"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/txt_anwser_translate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:text="Mầu trắng"
+            android:textColor="@color/white"
+            android:textSize="@dimen/kow_title_theme_gamekow"
+
+            app:layout_constraintLeft_toLeftOf="@id/img_bg_gameover"
+            app:layout_constraintRight_toRightOf="@id/img_bg_gameover"
+            app:layout_constraintTop_toBottomOf="@+id/txt_anwser_newword" />
+
+        <Button
+            android:id="@+id/btn_exit"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/kow_height_btn_start"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="@dimen/kow_btnstart_margin_bottom"
+            android:background="@drawable/spr_button_blue_click"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Đóng"
+            android:textColor="@color/white"
+            android:textSize="@dimen/kow_txt_btn_start"
+            app:layout_constraintBottom_toBottomOf="@id/img_bg_gameover"
+            app:layout_constraintEnd_toStartOf="@+id/btn_next"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_anwser_translate"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/kow_height_btn_start"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="@dimen/kow_btnstart_margin_bottom"
+            android:background="@drawable/spr_orange_click"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Chơi tiếp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/kow_txt_btn_start"
+            app:layout_constraintBottom_toBottomOf="@id/img_bg_gameover"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_exit"
+            app:layout_constraintTop_toBottomOf="@+id/txt_anwser_translate"
+            app:layout_constraintWidth_percent="0.2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

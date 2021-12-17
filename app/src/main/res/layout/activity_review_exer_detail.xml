@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/exer_margin_top"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHeight_percent="0.13"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.97">
+
+        <ImageView
+            android:id="@+id/img_title_exe_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="@dimen/icon_back_exercises"
+            android:layout_height="@dimen/icon_back_exercises"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp10"
+            android:padding="@dimen/dp3"
+            android:src="@drawable/ic_back_menu" />
+
+        <ImageView
+            android:id="@+id/img_back_right"
+            android:layout_width="@dimen/icon_back_exercises"
+            android:layout_height="@dimen/icon_back_exercises"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp10"
+            android:padding="@dimen/dp3"
+            android:src="@drawable/img_mute"
+
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txt_lable_exer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/img_back_right"
+            android:layout_toRightOf="@id/img_back"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_lable_exer" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/exercises_margin_leght"
+        android:layout_marginTop="@dimen/exer_margin_top"
+        android:layout_marginRight="@dimen/exercises_margin_leght"
+        android:layout_marginBottom="@dimen/exer_margin_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+        app:layout_constraintWidth_percent="0.97">
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_exer_debai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/dp7"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_name_exer"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+
+                    android:id="@+id/txt_start_time_lable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:padding="@dimen/dp3"
+                    android:text="Thời gian bắt đầu: "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_exer_content"
+                    app:layout_constraintEnd_toStartOf="@id/txt_start_time"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_exer_debai" />
+
+                <TextView
+                    android:id="@+id/txt_start_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp3"
+                    android:textColor="@color/red_test365"
+                    android:textSize="@dimen/txt_exer_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/txt_start_time_lable"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_exer_debai" />
+
+                <TextView
+
+                    android:id="@+id/txt_duration_time_lable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:padding="@dimen/dp3"
+                    android:text="Thời gian kết thúc: "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_exer_content"
+                    app:layout_constraintEnd_toStartOf="@id/txt_duration_time"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_start_time" />
+
+                <TextView
+                    android:id="@+id/txt_duration_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp3"
+                    android:textColor="@color/red_test365"
+                    android:textSize="@dimen/txt_exer_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/txt_duration_time_lable"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_start_time" />
+
+                <TextView
+                    android:id="@+id/txt_exer_bancunglam_lable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:padding="@dimen/dp3"
+                    android:text="Số bạn cùng hệ thống tham gia: "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_exer_content"
+                    app:layout_constraintEnd_toStartOf="@id/txt_exer_bancunglam"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_duration_time" />
+
+                <TextView
+                    android:id="@+id/txt_exer_bancunglam"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp3"
+                    android:textColor="@color/red_test365"
+                    android:textSize="@dimen/txt_exer_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/txt_exer_bancunglam_lable"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_duration_time" />
+
+                <TextView
+                    android:id="@+id/txt_exer_bancungtruong_lable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:padding="@dimen/dp3"
+                    android:text="Số bạn cùng trường tham gia: "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_exer_content"
+                    app:layout_constraintEnd_toStartOf="@id/txt_exer_bancungtruong"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_exer_bancunglam" />
+
+                <TextView
+                    android:id="@+id/txt_exer_bancungtruong"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp3"
+                    android:textColor="@color/red_test365"
+                    android:textSize="@dimen/txt_exer_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/txt_exer_bancungtruong_lable"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_exer_bancunglam" />
+
+                <TextView
+                    android:id="@+id/txt_exer_bancunglop_lable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:padding="@dimen/dp3"
+                    android:text="Số bạn cùng lớp tham gia: "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_exer_content"
+                    app:layout_constraintEnd_toStartOf="@id/txt_exer_bancunglop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_exer_bancungtruong" />
+
+                <TextView
+                    android:id="@+id/txt_exer_bancunglop"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp3"
+                    android:textColor="@color/red_test365"
+                    android:textSize="@dimen/txt_exer_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/txt_exer_bancunglop_lable"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_exer_bancungtruong" />
+
+                <TextView
+                    android:id="@+id/txt_point_your"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:gravity="center"
+                    android:padding="@dimen/dp5"
+                    android:text="@string/txt_point"
+
+                    android:textColor="@color/red_test365"
+                    android:textSize="@dimen/txt_exer_content"
+                    app:layout_constraintEnd_toStartOf="@id/txt_title_point_max"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_exer_bancunglop" />
+
+                <TextView
+                    android:id="@+id/txt_point"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:textColor="@color/red_test365"
+                    android:textSize="@dimen/text_lable_lambai"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/txt_point_your"
+                    app:layout_constraintStart_toStartOf="@id/txt_point_your"
+                    app:layout_constraintTop_toBottomOf="@id/txt_point_your" />
+
+                <TextView
+                    android:id="@+id/txt_title_point_max"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:gravity="center"
+                    android:padding="@dimen/dp5"
+                    android:text="@string/txt_exer_pointmax"
+
+                    android:textColor="@color/red_test365"
+                    android:textSize="@dimen/txt_exer_content"
+                    app:layout_constraintEnd_toStartOf="@id/txt_title_point_average"
+                    app:layout_constraintStart_toEndOf="@id/txt_point_your"
+                    app:layout_constraintTop_toBottomOf="@id/txt_exer_bancunglop" />
+
+                <TextView
+
+                    android:id="@+id/txt_exer_pointmax"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:textColor="@color/red_test365"
+                    android:textSize="@dimen/text_lable_lambai"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/txt_title_point_max"
+                    app:layout_constraintStart_toStartOf="@id/txt_title_point_max"
+                    app:layout_constraintTop_toBottomOf="@id/txt_title_point_max" />
+
+                <TextView
+                    android:id="@+id/txt_title_point_average"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:gravity="center"
+                    android:padding="@dimen/dp5"
+                    android:text="@string/txt_exer_pointtb"
+                    android:textColor="@color/red_test365"
+                    android:textSize="@dimen/txt_exer_content"
+                    app:layout_constraintEnd_toStartOf="@id/txt_title_point_min"
+                    app:layout_constraintStart_toEndOf="@id/txt_title_point_max"
+                    app:layout_constraintTop_toBottomOf="@id/txt_exer_bancunglop" />
+
+                <TextView
+                    android:id="@+id/txt_exer_pointtb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:textColor="@color/red_test365"
+                    android:textSize="@dimen/text_lable_lambai"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/txt_title_point_average"
+                    app:layout_constraintStart_toStartOf="@id/txt_title_point_average"
+                    app:layout_constraintTop_toBottomOf="@id/txt_title_point_average" />
+
+                <TextView
+                    android:id="@+id/txt_title_point_min"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:layout_marginRight="@dimen/dp5"
+                    android:gravity="center"
+                    android:padding="@dimen/dp5"
+                    android:text="@string/txt_exer_pointmin"
+                    android:textColor="@color/red_test365"
+                    android:textSize="@dimen/txt_exer_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/txt_title_point_average"
+                    app:layout_constraintTop_toBottomOf="@id/txt_exer_bancunglop" />
+
+                <TextView
+                    android:id="@+id/txt_exer_point_min"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:textColor="@color/red_test365"
+                    android:textSize="@dimen/text_lable_lambai"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/txt_title_point_min"
+                    app:layout_constraintLeft_toRightOf="@id/txt_exer_trungbinh"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/txt_title_point_min"
+                    app:layout_constraintTop_toBottomOf="@id/txt_title_point_min" />
+
+
+
+                <Button
+                    android:fontFamily="@font/roboto_bold"
+                    android:id="@+id/btn_guilai"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginBottom="@dimen/dp7"
+                    android:background="@drawable/btn_3"
+                    android:text="Gửi lại bài"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_exer_content"
+                    app:layout_constraintHeight_percent="0.13"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btn_xemlaibai"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_sticker"
+                    app:layout_constraintWidth_percent="0.3" />
+
+                <Button
+                    android:fontFamily="@font/roboto_bold"
+                    app:layout_constraintHeight_percent="0.13"
+                    android:id="@+id/btn_xemlaibai"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginBottom="@dimen/dp7"
+                    android:background="@drawable/btn_1"
+                    android:text="Xem lại bài đã làm"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_exer_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btn_guilai"
+                    app:layout_constraintTop_toBottomOf="@+id/img_sticker"
+                    app:layout_constraintWidth_percent="0.3" />
+
+                <ImageView
+                    android:layout_marginTop="@dimen/dp10"
+                    android:padding="@dimen/dp3"
+                    android:id="@+id/img_sticker"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:src="@drawable/sticker"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_exer_point_min"
+                    app:layout_constraintHeight_percent="0.2" />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:padding="@dimen/dp3"
+                    app:civ_border_color="@color/orange"
+                    app:civ_border_width="1dp"
+                    android:id="@+id/img_avata_chil"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dp5"
+                    android:src="@drawable/icon_avata"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_exer_point_min"
+                    app:layout_constraintHeight_percent="0.2" />
+                <TextView
+                    android:visibility="visible"
+                    android:id="@+id/txt_review_video"
+                    android:gravity="center"
+                    android:textSize="@dimen/txt_name_home"
+                    android:text="Xem bài giảng"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toStartOf="@id/txt_share_exer"
+                    app:layout_constraintBottom_toBottomOf="@id/img_avata_chil"
+                    app:layout_constraintStart_toEndOf="@id/img_avata_chil"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:visibility="visible"
+                    android:id="@+id/txt_share_exer"
+                    android:gravity="center"
+                    android:textSize="@dimen/txt_name_home"
+                    android:text="Chia sẻ bài tập"
+                    android:textStyle="italic"
+                    app:layout_constraintStart_toEndOf="@id/txt_review_video"
+                    app:layout_constraintBottom_toBottomOf="@id/img_avata_chil"
+                    app:layout_constraintEnd_toStartOf="@id/img_sticker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/img_share_exer"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:padding="@dimen/dp5"
+                    android:src="@drawable/icon_share"
+                    app:layout_constraintBottom_toTopOf="@id/txt_share_exer"
+                    app:layout_constraintEnd_toEndOf="@id/txt_share_exer"
+                    app:layout_constraintStart_toStartOf="@id/txt_share_exer"
+                    app:layout_constraintTop_toTopOf="@id/img_sticker" />
+                <ImageView
+                    android:visibility="visible"
+                    android:padding="@dimen/dp5"
+                    android:id="@+id/img_review_video"
+                    app:layout_constraintEnd_toStartOf="@id/txt_share_exer"
+                    app:layout_constraintStart_toEndOf="@id/img_avata_chil"
+                    app:layout_constraintTop_toTopOf="@id/img_sticker"
+                    app:layout_constraintBottom_toTopOf="@id/txt_review_video"
+                    android:src="@drawable/icon_show_video"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

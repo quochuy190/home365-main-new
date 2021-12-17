@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RelativeLayout
+        android:id="@+id/rl_sp_5050"
+        android:layout_width="@dimen/icon_support"
+        android:layout_height="@dimen/icon_support"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_sp_5050"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="50:50"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_sp_tptt"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/img_delete_sp_5050"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp5"
+
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_sp_call"
+        android:layout_width="@dimen/icon_support"
+        android:layout_height="@dimen/icon_support"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toRightOf="@id/rl_sp_5050"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_sp_call"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/img_delete_sp_call"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp5"
+
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_sp_khangia"
+        android:layout_width="@dimen/icon_support"
+        android:layout_height="@dimen/icon_support"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toRightOf="@id/rl_sp_call"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_sp_khangia"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/img_delete_sp_add_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp5"
+
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_sp_minus_monney"
+        android:layout_width="@dimen/icon_support"
+        android:layout_height="@dimen/icon_support"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="@id/rl_sp_khangia"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_sp_minus_monney"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/img_delete_sp_minus_monney"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp5"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_time"
+        android:layout_width="@dimen/icon_time"
+        android:layout_height="@dimen/icon_time"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_game_time" />
+
+        <TextView
+            android:id="@+id/txt_time_game"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="30:00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_time_game_tptt" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_tptt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_sp_khangia">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_question"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginRight="@dimen/margin_question"
+                android:background="@drawable/spr_bg_question_game_tptt"
+                android:padding="@dimen/dp10"
+                tools:ignore="WebViewLayout">
+
+                <TextView
+                    android:id="@+id/txt_curren_question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Câu 1: "
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_17sp"
+                    android:textStyle="bold" />
+
+                <WebView
+                    android:id="@+id/webview_question_game"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/txt_curren_question">
+
+                </WebView>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_anwser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_question"
+                android:layout_marginTop="@dimen/dp10"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_anwser_A"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_anwser_game"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginRight="@dimen/margin_anwser_game"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:background="@drawable/spr_bg_anwser_game_tptt"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/dp5"
+                        tools:ignore="WebViewLayout">
+
+                        <TextView
+                            android:id="@+id/lableA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="A "
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_17sp"
+                            android:textStyle="bold" />
+
+                        <WebView
+                            android:id="@+id/webview_anwser_A"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/lableA">
+
+                        </WebView>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_anwser_B"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_anwser_game"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginRight="@dimen/margin_anwser_game"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:background="@drawable/spr_bg_anwser_game_tptt"
+                        android:gravity="center|center_vertical"
+                        android:padding="@dimen/dp5"
+                        tools:ignore="WebViewLayout">
+
+                        <TextView
+
+                            android:id="@+id/lableB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="B "
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_17sp"
+                            android:textStyle="bold" />
+
+                        <WebView
+                            android:id="@+id/webview_anwser_B"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/lableB">
+
+                        </WebView>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_anwser_C"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_anwser_game"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginRight="@dimen/margin_anwser_game"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:background="@drawable/spr_bg_anwser_game_tptt"
+                        android:gravity="center"
+                        android:padding="@dimen/dp5"
+                        tools:ignore="WebViewLayout">
+
+                        <TextView
+
+                            android:id="@+id/lableC"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="C "
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_17sp"
+                            android:textStyle="bold" />
+
+                        <WebView
+                            android:id="@+id/webview_anwser_C"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/lableC">
+
+                        </WebView>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_anwser_D"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_anwser_game"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginRight="@dimen/margin_anwser_game"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:background="@drawable/spr_bg_anwser_game_tptt"
+                        android:gravity="center"
+                        android:padding="@dimen/dp5"
+                        tools:ignore="WebViewLayout">
+
+                        <TextView
+                            android:id="@+id/lableD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="D "
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_17sp"
+                            android:textStyle="bold" />
+
+                        <WebView
+                            android:id="@+id/webview_anwser_D"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/lableD">
+
+                        </WebView>
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_anwser">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/img_stop_game"
+                        android:layout_width="@dimen/dp200"
+                        android:layout_height="@dimen/dp40"
+                        android:src="@drawable/btn_1" />
+
+                    <TextView
+                        android:id="@+id/btn_dungcuocchoi"
+                        android:layout_width="@dimen/dp200"
+                        android:layout_height="@dimen/dp40"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+
+                        android:text="Dừng cuộc chơi"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_13sp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/img_button_confirm"
+                        android:layout_width="@dimen/dp200"
+                        android:layout_height="@dimen/dp40"
+                        android:src="@drawable/btn_3" />
+
+                    <TextView
+                        android:id="@+id/btn_traloi"
+                        android:layout_width="@dimen/dp200"
+                        android:layout_height="@dimen/dp40"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="Trả lời"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_13sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_anwser_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_button"
+                android:orientation="vertical"
+
+                android:visibility="invisible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_anwser_A_test"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_anwser_game"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginRight="@dimen/margin_anwser_game"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:background="@drawable/spr_bg_anwser_game_tptt"
+                        android:gravity="center"
+                        android:padding="@dimen/dp5"
+                        tools:ignore="WebViewLayout">
+
+                        <TextView
+                            android:id="@+id/lableA_test"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="A "
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_17sp"
+                            android:textStyle="bold" />
+
+                        <WebView
+                            android:id="@+id/webview_anwser_A_test"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/lableA_test">
+
+                        </WebView>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_anwser_C"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_anwser_game"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginRight="@dimen/margin_anwser_game"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:background="@drawable/spr_bg_anwser_game_tptt"
+                        android:gravity="center"
+                        android:padding="@dimen/dp5"
+                        tools:ignore="WebViewLayout">
+
+                        <TextView
+
+                            android:id="@+id/lableC"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="C "
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_17sp"
+                            android:textStyle="bold" />
+
+                        <WebView
+                            android:id="@+id/webview_anwser_C"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/lableC">
+
+                        </WebView>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_point_game"
+        android:layout_width="@dimen/width_right_menu_game"
+        android:layout_height="match_parent"
+        android:background="@color/bg_menu_point_gamee"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_point_game"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+    <ImageView
+
+        android:id="@+id/btn_on_off_point"
+        android:layout_width="@dimen/dp30"
+        android:layout_height="@dimen/dp50"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_back_game"
+        app:layout_constraintBottom_toBottomOf="@+id/rl_point_game"
+        app:layout_constraintEnd_toStartOf="@+id/rl_point_game"
+        app:layout_constraintTop_toTopOf="@+id/rl_point_game" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

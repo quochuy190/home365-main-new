@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+
+        android:id="@+id/imageView23"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="@dimen/dp10"
+
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintLeft_toLeftOf="@id/gl_2"
+        app:layout_constraintTop_toTopOf="@id/gl_1"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_level_3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView23"
+        app:layout_constraintTop_toTopOf="@+id/gl_1"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView22"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="@+id/gl_5"
+        app:layout_constraintTop_toTopOf="@+id/gl_3" />
+
+    <Button
+        android:id="@+id/btn_level_1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_keyboard_sudoku"
+        android:background="@drawable/spr_button_green_click"
+        android:text="dễ"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/gl_4"
+        app:layout_constraintEnd_toStartOf="@+id/btn_level_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.2" />
+
+
+    <Button
+        android:id="@+id/btn_level_2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_keyboard_sudoku"
+        android:background="@drawable/spr_button_oragen_click"
+        android:text="Trung bình"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/gl_4"
+        app:layout_constraintEnd_toStartOf="@+id/btn_level_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_level_1"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <Button
+        android:id="@+id/btn_level_3"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_keyboard_sudoku"
+        android:background="@drawable/spr_button_blue_click"
+        android:text="khó"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/gl_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_level_2"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/height_keyboard_sudoku"
+        android:layout_height="@dimen/height_keyboard_sudoku"
+        android:layout_margin="@dimen/dp5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back_menu" />
+
+    <ImageView
+        android:id="@+id/btn_mute"
+        android:layout_width="@dimen/height_keyboard_sudoku"
+        android:layout_height="@dimen/height_keyboard_sudoku"
+        android:layout_margin="@dimen/dp5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_mute" />
+
+    <TextView
+        android:background="@drawable/spr_click_textview"
+        android:id="@+id/txt_guilde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp5"
+        android:text="@string/txt_guilde_sudoku_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_value_sudoku"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

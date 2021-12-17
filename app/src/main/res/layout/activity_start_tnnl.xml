@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        app:layout_constraintWidth_percent="0.7"
+        app:layout_constraintHeight_percent="0.27"
+        android:id="@+id/img_logo_tnnl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp20"
+
+        android:src="@drawable/txt_tinhnhanhnholau"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:fontFamily="@font/roboto_bold"
+        android:id="@+id/txt_guilde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spr_click_textview"
+        android:padding="@dimen/dp5"
+        android:text="@string/txt_guilde_sudoku_title"
+        android:textColor="@color/txt_point"
+        android:textSize="@dimen/txt_xeptrung"
+        app:layout_constraintTop_toBottomOf="@id/img_logo_tnnl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/btn_play_tnnl"
+        android:layout_width="@dimen/dp200"
+        android:layout_height="@dimen/dp45"
+        android:layout_marginTop="@dimen/dp40"
+        android:layout_marginRight="@dimen/dp40"
+        android:background="@drawable/btn_4"
+        android:fontFamily="@font/font1"
+        android:text="Play"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_18sp"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_view_level_game_tnnl"
+        android:layout_marginBottom="@dimen/dp5"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:padding="@dimen/dp5">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/tnnh_broad" />
+
+                <Button
+                    android:id="@+id/btn_easy"
+                    android:layout_width="@dimen/btn_level_game_width"
+                    android:layout_height="@dimen/btn_level_game_height"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/btn_level_game_margin_top"
+                    android:background="@drawable/spr_button_green_click"
+                    android:fontFamily="@font/font1"
+                    android:text="Dễ"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/btn_level_font"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"></LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"></LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:padding="@dimen/dp5">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/tnnh_broad" />
+
+                <Button
+                    android:id="@+id/btn_normal"
+                    android:layout_width="@dimen/btn_level_game_width"
+                    android:layout_height="@dimen/btn_level_game_height"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/btn_level_game_margin_top"
+                    android:background="@drawable/spr_button_oragen_click"
+                    android:fontFamily="@font/font1"
+                    android:text="Trung bình"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/btn_level_font"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:padding="@dimen/dp5">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/tnnh_broad" />
+
+                <Button
+                    android:id="@+id/btn_hard"
+                    android:layout_width="@dimen/btn_level_game_width"
+                    android:layout_height="@dimen/btn_level_game_height"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/btn_level_game_margin_top"
+                    android:background="@drawable/spr_button_red_click"
+                    android:fontFamily="@font/font1"
+                    android:text="Khó"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/btn_level_font"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"></LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="@dimen/height_keyboard_sudoku"
+        android:layout_height="@dimen/height_keyboard_sudoku"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_back_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

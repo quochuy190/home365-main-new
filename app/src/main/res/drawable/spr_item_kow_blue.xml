@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="ring">
+    <item android:drawable="@drawable/img_menu_toan"
+        android:state_pressed="false"></item>
+</selector>

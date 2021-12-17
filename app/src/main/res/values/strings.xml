@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">Home365</string>
+    <string name="btn_chamdiem">Chấm điểm</string>
+    <string name="txt_loading_dialog">Đang tải. Vui lòng đợi...</string>
+    <!--error-->
+    <string name="error_network">Lỗi kết nối</string>
+    <string name="error">Lỗi</string>
+    <string name="error_network_message">Lỗi kết nối, vui lòng kiểm tra mạng và thử lại</string>
+    <string name="txt_dieukhoan">Tôi hoàn toàn đồng ý với các <b><u>Điều khoản dịch vụ</u></b> của Home365Kid</string>
+    <string name="notify">Thông báo</string>
+    <string name="btn_no">Không</string>
+    <string name="btn_yes">Đồng ý</string>
+    <string name="masseger_edt_null">Vui lòng nhập vào đầy đủ thông tin và tiếp tục!</string>
+    <string name="notify_city_null">Bạn vui lòng chọn tỉnh/thành phố</string>
+    <string name="notify_school_null">Bạn vui lòng chọn trường cho bé</string>
+    <string name="txt_web"> <i><u>https://home365.online</u></i></string>
+    <string name="txt_lable_nhanxet">NHẬN XÉT CỦA HỆ THỐNG</string>
+    <string name="txt_exer_point">Điểm hệ thống</string>
+    <string name="txt_exer_xephang">Xếp hạng</string>
+    <string name="txt_exer_pointmax">Điểm cao nhất</string>
+    <string name="txt_point">Điểm của bạn</string>
+    <string name="txt_exer_pointtb">Điểm trung bình</string>
+    <string name="txt_exer_pointmin">Điểm thấp nhất</string>
+    <!--Game-->
+    <string name="btn_trieuphutrithuc">TRIỆU PHÚ TRI THỨC</string>
+    <string name="btn_sodoku">SUDOKU</string>
+    <string name="btn_kingofword">KING OF WORD</string>
+    <string name="btn_tinhnhanhnholau">TÍNH NHANH NHỚ LÂU</string>
+    <string name="txt_guide_game_tptt">Cách chơi giống như gameshow Ai là Triệu phú trên Truyền hình.
+Mỗi câu hỏi chỉ được suy nghĩ và trả lời trong 2 phút. Con trả lời sai hoặc hết giờ sẽ phải dừng cuộc chơi và quay lại mốc tiền thưởng.
+Mỗi tuần chỉ chơi một lần vào bất kỳ ngày nào.
+        \nSau khi chọn đáp án, con phải bấm vào <b>“Trả lời”</b> để xác nhận.
+        \nLưu ý sử dụng quyền trợ giúp đúng lúc:
+        \n• <b>50:50</b>: Bỏ đi 2 đáp án sai
+        \n• <b>+60s</b>: Thêm 1 phút suy nghĩ cho câu hỏi
+        \n• <b>Thêm đáp án</b>: Con được chọn 2 đáp án
+        \n• <b>-1000đ</b>: mua đáp án đúng, tiền thưởng sẽ bị trừ đi 1000 đồng.
+        \nBấm nút <b>“Dừng cuộc chơi”</b> để bảo toàn giải thưởng.
+\nToàn bộ giải thưởng đạt được sẽ được cộng vào tài khoản của mẹ. Chúc con may mắn!
+
+</string>
+    <string name="txt_showpoint">Chấm điểm</string>
+    <string name="channel_name">Home365</string>
+    <string name="txt_hotline">Hotline <b><u>1900561548</u></b></string>
+    <string name="notification_title">Home365</string>
+    <string name="notification_message">Đang làm bài tập</string>
+    <string name="txt_guilde_sudoku_title"><u>Hướng dẫn chơi</u></string>
+    <string name="txt_title_select_sub">SELECT TOPIC</string>
+    <string name="txt_quenmatkhau"><b><u><i>Quên mã học sinh</i></u></b></string>
+    <string name="txt_dangky">Đăng ký tài khoản</string>
+    <string name="txt_content_feedback">Cảm ơn con, hãy giữ kiên trì rèn luyện hàng ngày  cùng Home365 để đạt được thành công nhé.
+</string>
+    <string name="txt_guild_login_content">Việc đăng ký tài khoản con được thực hiện trên app mẹ có tên là Home365. Mẹ tải app Home365 về máy để tạo tài khoản và tải bài tập cho con nhé.</string>
+    <string name="txt_title_guild">Tài khoản con được tạo trên app mẹ Home365.</string>
+    <string name="txt_content_information">Một sản phẩm tâm huyết được phát triển bởi\n
+Công ty Cổ phần Đầu tư Phát triển Công nghệ và Truyền thông\n(được sáng lập bởi VNPT).</string>
+    <string name="txt_policy"><b><u>Chính sách bảo mật</u></b></string>
+    <string name="txt_web_home">Website: <i><u> https://home365.online.</u></i></string>
+    <string name="txt_guild_sudoku">Đăng ký tài khoản</string>
+    <string name="detail_game_tnnl">Các cặp câu hỏi - câu trả lời được trộn lẫn với nhau và dấu trong các ô cửa bí mật. Nhiệm vụ của các con là chơi với Home365 để lần lượt tìm và ghép đôi chính xác câu hỏi với câu trả lời.
+\nAi ghép sai sẽ mất lượt và đến người khác. Các con phải tính thật nhanh và nhớ thật kỹ vị trí các ô đã mở để nhanh tay ghép được nhiều cặp hỏi - đáp.
+\nKết thúc game, ai ghép được nhiều đôi hơn sẽ dành chiến thắng, chỉ số phụ là bên nào ghép nhanh hơn.
+</string>
+    <string name="detail_game_sudoku">Trò chơi rèn luyện khả năng tính toán và tư duy có độ sâu nhiều “nước" của người Nhật phổ biến trên toàn thế giới.
+\nNhiệm vụ của các con là điền các con số từ 1 đến 9 vào một bảng gồm 9x9 ô vuông sao cho mỗi số chỉ xuất hiện một lần trong một hàng, một cột và một bảng con 3x3.
+\nCẩn thận nhé, trò chơi này đã “gây nghiện" cho rất nhiều bạn và trở thành “siêu nhân"
+</string>
+    <string name="detail_game_kow">Trò chơi dân gian ghép các ký tự để thành một từ có nghĩa trong tiếng Anh.
+\nCó thể ghép từ trái sang phải hoặc từ phải sang trái. Bên nào ghép ký tự cuối cùng để hoàn thành một từ sẽ dành chiến thắng.
+\nTrò chơi này giúp các con nâng cao vốn từ tiếng Anh một cách nhanh chóng.
+</string>
+    <string name="txt_read_story">Nghe truyện rất tốt, giúp tăng trí tưởng tượng và ngôn ngữ.
+        Home365 dành tặng kho truyện được tuyển chọn từ các nguồn trên Internet.
+        Con có thể nghe ngay cả khi tắt màn hình.</string>
+    <string name="txt_baitaptuan"><b>Bài tập tuần:</b> Hàng tuần HOME365 sẽ lần lượt gửi bài tập bám sát theo chương trình SGK xuống App, học sinh học trên lớp đến đâu sẽ làm bài tập đến đó</string>
+    <string name="txt_guild_princess">Lưu ý: làm sai sẽ không giải cứu được công chúa và bạn sẽ không được tiếp tục làm bài này, hết sức cẩn thận</string>
+    <string name="txt_guild_dientu">Hướng dẫn: điền đủ dấu, thanh, có thể viết hoa hoặc thường đều được</string>
+    <string name="txt_guild_noicau">Hướng dẫn: chạm vào liên tiếp vào 2 ô để nối</string>
+    <string name="txt_guild_xapxep">Hướng dẫn: bấm, giữ và di chuyển ô chữ/số đến vị trí thích hợp</string>
+    <string name="txt_guild_practice">
+        Phần này bao gồm các bài tập luyện tập, bám sát theo chương trình SGK học kỳ I, II và ôn tập hè.\n\n
+        Hàng tuần hệ thống sẽ tự động giao bài xuống App theo tiến độ học thực tế trên lớp.\n\n
+        Các bạn lưu ý hoàn thành bài tập ngay trong tuần, không để đến kỳ thi rồi mới học.\n\n
+        Chúc bạn thành công!
+</string>
+    <string name="txt_guild_skill">
+        Phần này bao gồm các khoá học tiếng Anh và các môn kỹ năng được tích hợp từ các hệ thống đào tạo trực tuyến uy tín trong và ngoài nước.\n\n
+        Các bạn lưu ý chọn khoá học phù hợp, học chậm rãi hàng ngày và học hết các bài để đạt kết quả cao nhất.\n\n
+        Chúc bạn thành công!
+
+</string>
+    <string name="txt_rating">Đánh giá bài tập đã làm</string>
+    <string name="txt_rating_game">Đánh giá về trò chơi triệu phú tri thức.</string>
+<!--    <string name="ad_unit_id">ca-app-pub-9286300864046388/2256022318</string>--><!--Release -->
+    <string name="ad_unit_id">ca-app-pub-3940256099942544/1033173712</string><!--Test -->
+    <string name="forgot_pass"><u>Quên mật khẩu</u></string>
+    <string name="info_register_vip_1">Đăng ký gói <b>Ngày HOME365</b> soạn tin \n\n<b><font color="#F76E11">DK H365 </font></b>gửi
+        <b><font color="#F76E11">9285</font></b> (3.000đ/ngày)
+    </string>
+    <string name="info_register_vip_2">Hoặc \n\n<b><font color="#F76E11">XN H365</font></b> gửi <b><font color="#F76E11">9285</font></b>
+        (3.000đ/ngày) </string>
+    <string name="text_benefit1">Được sử dụng tất cả các nội dung bài tập, vui chơi, kỹ năng và ứng dụng Home365.</string>
+    <string name="text_benefit2">Mở khóa toàn bộ các đề luyện thi các môn Toán, Tiếng Việt, Tiếng Anh trên hệ thống.</string>
+</resources>

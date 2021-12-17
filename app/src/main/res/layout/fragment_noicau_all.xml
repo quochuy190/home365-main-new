@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_noicau"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:id="@+id/ll_lable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/margin_left_lambai"
+            android:layout_height="@dimen/margin_left_lambai"
+            android:layout_margin="@dimen/dp5" />
+
+        <TextView
+            android:id="@+id/txt_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_marginRight="@dimen/dp5"
+            android:layout_weight="1"
+            android:background="@drawable/spr_lable_lambai"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:text="Câu 3: Chọn đáp án đúng"
+            android:textColor="@color/lable_lambai"
+            android:textSize="@dimen/text_lable_lambai"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="@dimen/margin_left_lambai"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp5"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_nopbai"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/image_next"
+        android:padding="@dimen/dp5"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btn_xemdiem"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/btn_xemdiem"
+        android:layout_width="@dimen/btn_showpoint_width"
+        android:layout_height="@dimen/btn_showpoint_hight"
+        android:layout_marginBottom="@dimen/dp3"
+        android:background="@drawable/btn_1"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:padding="@dimen/dp5"
+        android:text="@string/txt_showpoint"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_showpoint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <androidx.core.widget.NestedScrollView
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_noicau_guild"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/img_background"
+        app:layout_constraintTop_toBottomOf="@+id/ll_lable">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:layout_weight="3"
+                    android:background="@color/gray"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_dapanA_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp1"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp5"
+                        tools:ignore="WebViewLayout">
+
+                        <ImageView
+                            android:id="@+id/img_dapan_A_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp50"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+                        <WebView
+                            android:id="@+id/webview_dapannoicau_A_1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_dapanA_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp1"
+                        android:background="@color/white"
+                        tools:ignore="WebViewLayout">
+
+
+                        <ImageView
+                            android:id="@+id/img_dapan_A_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp50"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+                        <WebView
+                            android:id="@+id/webview_dapannoicau_A_2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_dapanA_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp1"
+                        android:background="@color/white"
+                        tools:ignore="WebViewLayout">
+
+
+                        <ImageView
+                            android:id="@+id/img_dapan_A_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp50"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+                        <WebView
+                            android:id="@+id/webview_dapannoicau_A_3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_dapanA_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp1"
+                        android:background="@color/white"
+                        tools:ignore="WebViewLayout">
+
+                        <ImageView
+                            android:id="@+id/img_dapan_A_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp50"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+                        <WebView
+                            android:id="@+id/webview_dapannoicau_A_4"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </View>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp5"
+                    android:layout_weight="3"
+                    android:background="@color/gray"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_dapanB_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp1"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp5"
+                        tools:ignore="WebViewLayout">
+
+                        <ImageView
+                            android:id="@+id/img_dapan_B_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp50"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+                        <WebView
+                            android:id="@+id/webview_dapannoicau_B_1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_dapanB_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp1"
+                        android:background="@color/white"
+                        tools:ignore="WebViewLayout">
+
+                        <ImageView
+                            android:id="@+id/img_dapan_B_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp50"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+                        <WebView
+                            android:id="@+id/webview_dapannoicau_B_2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_dapanB_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp1"
+                        android:background="@color/white"
+                        tools:ignore="WebViewLayout">
+
+                        <ImageView
+                            android:id="@+id/img_dapan_B_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp50"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+                        <WebView
+                            android:id="@+id/webview_dapannoicau_B_3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_dapanB_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp1"
+                        android:background="@color/white"
+                        tools:ignore="WebViewLayout">
+
+                        <ImageView
+                            android:id="@+id/img_dapan_B_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp50"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+                        <WebView
+                            android:id="@+id/webview_dapannoicau_B_4"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_lable_dapan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp5"
+                android:text="Đáp án"
+                android:textColor="@color/red_test365"
+                android:textSize="@dimen/text_18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/ll_dapan_traloi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:layout_weight="3"
+                    android:background="@color/gray"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_dapanA_traloi_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_margin="@dimen/dp1"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp5"
+                        tools:ignore="WebViewLayout">
+
+                        <ImageView
+                            android:id="@+id/img_dapan_A_traloi_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp50"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+                        <WebView
+                            android:id="@+id/webview_dapannoicau_A_traloi_1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_dapanA_traloi_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp1"
+                        android:background="@color/white"
+                        tools:ignore="WebViewLayout">
+
+                        <ImageView
+                            android:id="@+id/img_dapan_A_traloi_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp50"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+                        <WebView
+                            android:id="@+id/webview_dapannoicau_A_traloi_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_dapanA_traloi_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp1"
+                        android:background="@color/white"
+                        tools:ignore="WebViewLayout">
+
+                        <ImageView
+                            android:id="@+id/img_dapan_A_traloi_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp50"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+                        <WebView
+                            android:id="@+id/webview_dapannoicau_A_traloi_3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_dapanA_traloi_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp1"
+                        android:background="@color/white"
+                        tools:ignore="WebViewLayout">
+
+                        <ImageView
+                            android:id="@+id/img_dapan_A_traloi_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp50"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+                        <WebView
+                            android:id="@+id/webview_dapannoicau_A_traloi_4"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </View>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp5"
+                    android:layout_weight="3"
+                    android:background="@color/gray"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_dapanB_traloi_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_margin="@dimen/dp1"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp5"
+                        tools:ignore="WebViewLayout">
+
+                        <ImageView
+                            android:id="@+id/img_dapan_B_traloi_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp50"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+                        <WebView
+                            android:id="@+id/webview_dapannoicau_B_traloi_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_dapanB_traloi_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp1"
+                        android:background="@color/white"
+                        tools:ignore="WebViewLayout">
+
+                        <ImageView
+                            android:id="@+id/img_dapan_B_traloi_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp50"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+                        <WebView
+                            android:id="@+id/webview_dapannoicau_B_traloi_2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_dapanB_traloi_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp1"
+                        android:background="@color/white"
+                        tools:ignore="WebViewLayout">
+
+                        <ImageView
+                            android:id="@+id/img_dapan_B_traloi_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp50"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+                        <WebView
+                            android:id="@+id/webview_dapannoicau_B_traloi_3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_dapanB_traloi_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp1"
+                        android:background="@color/white"
+                        tools:ignore="WebViewLayout">
+
+                        <ImageView
+
+                            android:id="@+id/img_dapan_B_traloi_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp50"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+                        <WebView
+                            android:id="@+id/webview_dapannoicau_B_traloi_4"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+    <ImageView
+        android:id="@+id/img_reload"
+        android:layout_width="@dimen/dp30"
+        android:layout_height="@dimen/dp30"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="@dimen/dp5"
+        android:src="@drawable/icon_reload"
+        android:visibility="visible"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_lable" />
+    <ImageView
+        android:id="@+id/img_anwser_chil"
+        android:layout_width="@dimen/icon_anwser_review"
+        android:layout_height="@dimen/icon_anwser_review"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="@dimen/dp5"
+        android:src="@drawable/icon_anwser_true"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_lable" />
+    <TextView
+        android:id="@+id/txt_noicau_guild"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:textSize="@dimen/txt_menu_utility_name"
+        android:text="@string/txt_guild_noicau"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_xemdiem"
+        android:padding="@dimen/dp3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+</androidx.constraintlayout.widget.ConstraintLayout>

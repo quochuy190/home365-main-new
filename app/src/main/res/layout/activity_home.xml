@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ActivityHome">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <ImageView
+
+        android:id="@+id/img_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/icon_boy_home"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:2"
+        app:layout_constraintStart_toStartOf="@id/guideline13"
+        app:layout_constraintTop_toTopOf="@id/guideline12" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="1dp"/>
+
+    <View
+        android:id="@+id/view_center"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/tv_title_bar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/title_bar_child"
+        android:fontFamily="@font/font1"
+        android:gravity="center"
+        android:text=""
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_lambaitap"
+        app:layout_constraintDimensionRatio="h,8:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/img_change_child"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_lambaitap"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/tv_title_bar"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toEndOf="@+id/img_avata"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.1"
+        app:srcCompat="@drawable/change_child" />
+
+    <Button
+        android:id="@+id/btn_lambaitap"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_above="@+id/btn_ketquahoctap"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/spr_button_red_click"
+        android:fontFamily="@font/font1"
+        android:text="Bài tập tuần"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_txt_content_guild_login"
+        app:layout_constraintBottom_toTopOf="@+id/btn_luyenthi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_bar"
+        app:layout_constraintWidth_percent="0.35" />
+
+    <Button
+        android:id="@+id/btn_ketquahoctap"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_above="@id/view_center"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/spr_button_green_click"
+        android:fontFamily="@font/font1"
+        android:scaleType="fitXY"
+        android:text="Vui chơi"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_txt_content_guild_login"
+        app:layout_constraintBottom_toTopOf="@+id/btn_vuichoi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_luyenthi"
+        app:layout_constraintWidth_percent="0.35" />
+
+    <Button
+        android:id="@+id/btn_vuichoi"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/view_center"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/spr_button_blue_click"
+        android:fontFamily="@font/font1"
+        android:text="Kỹ năng"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_txt_content_guild_login"
+        app:layout_constraintBottom_toTopOf="@+id/btn_bxh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.12"
+
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ketquahoctap"
+        app:layout_constraintWidth_percent="0.35" />
+
+    <Button
+
+        android:id="@+id/btn_luyenthi"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/btn_vuichoi"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/spr_orange_click"
+        android:fontFamily="@font/font1"
+        android:text="Luyện thi"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_txt_content_guild_login"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btn_ketquahoctap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.12"
+
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_lambaitap"
+        app:layout_constraintWidth_percent="0.35" />
+
+    <Button
+        android:id="@+id/btn_bxh"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/btn_vuichoi"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/spr_button_green_click"
+        android:fontFamily="@font/font1"
+        android:text="Vườn quà"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_txt_content_guild_login"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/btn_utilities"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.12"
+
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_vuichoi"
+        app:layout_constraintWidth_percent="0.35" />
+
+    <Button
+        android:id="@+id/btn_utilities"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/btn_vuichoi"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/spr_purple_click"
+        android:fontFamily="@font/font1"
+        android:text="Chia sẻ App"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_txt_content_guild_login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.12"
+
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_bxh"
+        app:layout_constraintWidth_percent="0.35" />
+
+    <FrameLayout
+        android:id="@+id/card_change_user"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintStart_toStartOf="@+id/txt_add_user"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_mute"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_vip"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/txt_add_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:padding="@dimen/dp2"
+        android:text="Thêm tài khoản"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_name_home"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_change_user" />
+
+    <ImageView
+        android:id="@+id/img_face"
+        android:layout_width="@dimen/height_keyboard_sudoku"
+        android:layout_height="@dimen/height_keyboard_sudoku"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_face"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_groupface"
+        android:layout_width="@dimen/height_keyboard_sudoku"
+        android:layout_height="@dimen/height_keyboard_sudoku"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_groupface"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_face" />
+
+    <RelativeLayout
+        android:id="@+id/rl_avata"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginRight="@dimen/dp10"
+        android:background="@drawable/spr_title_home"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.65">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp5"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_txt_content_guild_login" />
+
+    </RelativeLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_avata"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/spr_information"
+        android:src="@drawable/icon_avata"
+        android:visibility="visible"
+        app:civ_border_color="#A024CE"
+        app:civ_border_width="3dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/txt_name_home"
+        app:layout_constraintStart_toStartOf="@id/txt_name_home"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <TextView
+        android:id="@+id/txt_name_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp5"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:maxLines="2"
+        android:padding="@dimen/dp1"
+        android:textColor="@color/txt_name_home"
+        android:textSize="@dimen/txt_name_home"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_avata"
+        app:layout_constraintWidth_percent="0.17" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/btn_information"
+        android:layout_width="@dimen/dp45"
+        android:layout_height="@dimen/dp45"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/spr_information"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.13" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/btn_call"
+        android:layout_width="@dimen/dp45"
+        android:layout_height="@dimen/dp45"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_call_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/btn_information"
+        app:layout_constraintHeight_percent="0.13" />
+
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/spr_purple_click"
+        android:fontFamily="@font/aclonica_regular"
+        android:text="Profile"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_name_home"
+        app:layout_constraintDimensionRatio="5:1"
+        app:layout_constraintEnd_toEndOf="@+id/img_avata"
+        app:layout_constraintStart_toStartOf="@+id/img_avata"
+        app:layout_constraintTop_toTopOf="@+id/img_avata"
+        app:layout_constraintVertical_bias="0.83" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_show_multil_user"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/bg_game_tnnl"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_show_user"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_percent="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_back_ll_user"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.92"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.85" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_multil_user"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/guideline18"
+            app:layout_constraintEnd_toEndOf="@id/img_back_ll_user"
+            app:layout_constraintStart_toStartOf="@id/img_back_ll_user"
+            app:layout_constraintTop_toTopOf="@id/gl_show_user"
+            app:layout_constraintWidth_percent="0.75">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <ImageView
+            android:id="@+id/img_exit_ll_show"
+            android:layout_width="@dimen/height_keyboard_sudoku"
+            android:layout_height="@dimen/height_keyboard_sudoku"
+            android:layout_margin="5dp"
+            android:src="@drawable/icon_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

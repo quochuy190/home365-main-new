@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/width_item_objservice"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_item_shops"
+            android:layout_width="@dimen/width_item_objservice"
+            android:layout_height="@dimen/height_item_objservice"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/dp10"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/txt_item_shops_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_item_shops"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:maxLines="2"
+            android:padding="@dimen/dp5"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_name_home" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

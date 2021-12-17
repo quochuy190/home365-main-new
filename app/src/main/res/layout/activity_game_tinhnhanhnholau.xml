@@ -1,0 +1,1733 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hight_point_time_tnnl"
+        android:layout_marginTop="@dimen/dp5">
+
+        <ImageView
+            android:id="@+id/img_time"
+            android:layout_width="@dimen/icon_time_game_tnnl"
+            android:layout_height="@dimen/icon_time_game_tnnl"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_game_time" />
+
+        <TextView
+            android:id="@+id/txt_time_game"
+            android:layout_width="@dimen/icon_time_game_tnnl"
+            android:layout_height="@dimen/icon_time_game_tnnl"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:text="30:00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_time_game_tptt" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginRight="@dimen/dp5"
+            android:layout_marginBottom="@dimen/dp5"
+            android:layout_toLeftOf="@id/img_time">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="@dimen/item_back_kow"
+                android:layout_height="@dimen/item_back_kow"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp3"
+                android:src="@drawable/ic_back_menu" />
+
+            <ImageView
+                android:id="@+id/img_bg_player_one"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/dp5"
+                android:layout_toRightOf="@+id/img_back"
+
+                android:scaleType="fitXY" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_avata_player1"
+                android:layout_width="@dimen/icon_time_game_tnnl"
+                android:layout_height="@dimen/icon_time_game_tnnl"
+                android:layout_toRightOf="@+id/img_back"
+
+                app:civ_border_color="@color/green"
+                app:civ_border_width="@dimen/dp3" />
+
+            <TextView
+                android:id="@+id/txt_name_player_one"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/txt_tnnl_point_one"
+                android:layout_toRightOf="@id/img_avata_player1"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:maxLines="2"
+                android:padding="@dimen/dp5"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_player_name"
+                android:textStyle="bold" />
+            <ImageView
+                android:src="@drawable/exer_icon_diem"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="@dimen/icon_point_tnnl"
+                android:layout_height="@dimen/icon_point_tnnl"/>
+
+            <TextView
+
+                android:id="@+id/txt_tnnl_point_one"
+                android:layout_width="@dimen/icon_point_tnnl"
+                android:layout_height="@dimen/icon_point_tnnl"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/font1"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/text_20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginRight="@dimen/dp5"
+            android:layout_marginBottom="@dimen/dp5"
+            android:layout_toRightOf="@id/img_time">
+
+            <ImageView
+                android:id="@+id/img_bg_player_two"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/dp5"
+                android:layout_toLeftOf="@id/img_mute"
+
+                android:scaleType="fitXY" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_avata_player2"
+                android:layout_width="@dimen/icon_time_game_tnnl"
+                android:layout_height="@dimen/icon_time_game_tnnl"
+                android:layout_toLeftOf="@id/img_mute"
+
+                app:civ_border_color="@color/blue_tnnl"
+                app:civ_border_width="@dimen/dp3" />
+
+            <TextView
+
+                android:id="@+id/txt_name_player_two"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/img_avata_player2"
+                android:layout_toRightOf="@id/txt_tnnl_point_two"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:maxLines="2"
+                android:padding="@dimen/dp5"
+                android:text="Home365"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_player_name"
+                android:textStyle="bold" />
+            <ImageView
+                android:src="@drawable/exer_icon_diem"
+
+                android:layout_centerVertical="true"
+                android:layout_width="@dimen/icon_point_tnnl"
+                android:layout_height="@dimen/icon_point_tnnl"/>
+            <TextView
+                android:id="@+id/txt_tnnl_point_two"
+                android:layout_width="@dimen/icon_point_tnnl"
+                android:layout_height="@dimen/icon_point_tnnl"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/font1"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/text_20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img_mute"
+                android:layout_width="@dimen/item_back_kow"
+                android:layout_height="@dimen/item_back_kow"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp3"
+                android:src="@drawable/img_mute" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relativeLayout7"
+        android:orientation="vertical"
+        android:padding="@dimen/dp5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_0"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY" />
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="TODO"
+                    android:gravity="center"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_0"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:scaleType="fitXY"
+                        android:text="1"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item" />
+                </androidx.cardview.widget.CardView>
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5"
+                    app:cardElevation="@dimen/dp2">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="4"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="5"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="6"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="7"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="8"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="9"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_9"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="10"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_10"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="11"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_11"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_11"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_11"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="12"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+
+        </LinearLayout>
+        <!-- Hang 3 hang 4-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_12"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY" />
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="13"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_13"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_13"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_13"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="14"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_14"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_14"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_14"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="15"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_15"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="16"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_16"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_16"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_16"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="17"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_17"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_17"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_17"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="18"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_18"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_18"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_18"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="19"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_19"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_19"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_19"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="20"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_20"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_20"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_20"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="21"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_21"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_21"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_21"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="22"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_22"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_22"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_22"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="23"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+            <com.wajahatkarim3.easyflipview.EasyFlipView
+                android:id="@+id/flipView_23"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp5"
+
+                app:flipDuration="1500"
+                app:flipEnabled="true"
+                app:flipFrom="right"
+                app:flipOnTouch="false"
+                app:flipType="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_back_side_23"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:padding="@dimen/pading_image_item"
+                        android:scaleType="fitXY"
+
+                        />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/img_front_side_23"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="TODO"
+                        android:gravity="center"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/font1"
+                        android:gravity="center"
+                        android:text="24"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_stt_item"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+
+            </com.wajahatkarim3.easyflipview.EasyFlipView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+
+        android:id="@+id/rl_show_question"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_game_tnnl"
+        android:orientation="horizontal"
+        android:padding="@dimen/pading_show_question"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/view_center"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:id="@+id/rl_question_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_exit"
+            android:layout_toLeftOf="@+id/view_center">
+
+            <ImageView
+                android:id="@+id/img_broad_question_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_show_question_bang"
+                android:scaleType="fitXY" />
+
+            <TextView
+
+                android:id="@+id/txt_title_broad_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_content_broad"
+                android:gravity="center"
+                android:padding="@dimen/dp5"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_17sp"
+                android:textStyle="bold" />
+
+            <WebView
+                android:id="@+id/webview_question_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_title_broad_1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/margin_content_broad"
+                android:layout_marginRight="@dimen/margin_content_broad"
+                android:layout_marginBottom="@dimen/margin_content_broad"></WebView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_question2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_exit"
+            android:layout_toRightOf="@+id/view_center">
+
+            <ImageView
+                android:id="@+id/img_broad_question_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_show_question_bang"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/txt_title_broad_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_content_broad"
+                android:gravity="center"
+                android:padding="@dimen/dp5"
+
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_17sp"
+                android:textStyle="bold" />
+
+            <WebView
+                android:id="@+id/webview_question_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_title_broad_2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/margin_content_broad"
+                android:layout_marginRight="@dimen/margin_content_broad"
+                android:layout_marginBottom="@dimen/margin_content_broad"></WebView>
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_exit"
+            android:layout_width="@dimen/dp150"
+            android:layout_height="@dimen/dp40"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp5"
+            android:background="@drawable/btn_3"
+            android:fontFamily="@font/font1"
+            android:text="Đóng"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_show_gameover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_game_tnnl"
+        android:orientation="horizontal"
+        android:padding="@dimen/pading_show_question"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_gameover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/center"
+            android:padding="@dimen/dp10"
+           />
+
+        <View
+            android:id="@+id/center"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/txt_bonus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/center"
+            android:fontFamily="@font/font1"
+            android:gravity="center"
+            android:text="Thưởng: 0 đ"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_stt_item" />
+
+        <Button
+            android:id="@+id/btn_exit_gameover"
+            android:layout_width="@dimen/dp150"
+            android:layout_height="@dimen/dp40"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp5"
+            android:background="@drawable/btn_3"
+            android:fontFamily="@font/font1"
+            android:text="Đóng"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginLeft="@dimen/margin_item_menu_untility"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginRight="@dimen/margin_item_menu_untility"
+        android:id="@+id/icon_avata"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/icon_avata"
+        app:cardCornerRadius="@dimen/dp7"
+        app:civ_border_color="@color/orange"
+        app:civ_border_width="1dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/txt_name_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:maxLines="2"
+        android:padding="@dimen/dp2"
+        android:textSize="@dimen/txt_menu_utility_name"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon_avata" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

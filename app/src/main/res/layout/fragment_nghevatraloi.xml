@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:id="@+id/ll_lable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/margin_left_lambai"
+            android:layout_height="@dimen/margin_left_lambai"
+            android:layout_margin="@dimen/dp5" />
+
+        <TextView
+            android:id="@+id/txt_lable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_marginRight="@dimen/dp5"
+            android:layout_weight="1"
+            android:background="@drawable/spr_lable_lambai"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:text="Câu 3: Chọn đáp án đúng"
+            android:textColor="@color/lable_lambai"
+            android:textSize="@dimen/text_lable_lambai"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="@dimen/margin_left_lambai"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp5"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+    <Button
+        android:layout_marginBottom="@dimen/dp3"
+        android:id="@+id/btn_xemdiem"
+        android:layout_width="@dimen/btn_showpoint_width"
+        android:layout_height="@dimen/btn_showpoint_hight"
+        android:background="@drawable/btn_1"
+        android:fontFamily="@font/roboto_bold"
+        android:padding="@dimen/dp5"
+        android:text="@string/txt_showpoint"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_showpoint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <LinearLayout
+        android:visibility="invisible"
+        android:padding="@dimen/dp5"
+        android:id="@+id/ll_player"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_lable">
+
+        <ImageView
+            android:id="@+id/btnPlay"
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp5"
+            android:padding="@dimen/dp2"
+            android:src="@drawable/btn_play" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp1"
+                android:layout_marginRight="@dimen/dp5"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/player_name_song"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="Phía sau một cô gái"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_15sp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/songTotalDurationLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0:00"
+                        android:textColor="@color/black"
+                        android:visibility="gone" />
+
+                    <SeekBar
+                        android:id="@+id/player_progressbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp2"
+                        android:layout_marginRight="@dimen/dp2"
+                        android:backgroundTint="@color/black"
+                        android:max="100"
+                        android:progressBackgroundTint="@color/black" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/dp45"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/songCurrentDurationLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="00:00"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.core.widget.NestedScrollView
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_player"
+        app:layout_constraintBottom_toTopOf="@id/btn_xemdiem"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:id="@+id/txt_cauhoi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/dp5"
+            tools:ignore="WebViewLayout">
+            <WebView
+                android:padding="@dimen/dp5"
+                android:id="@+id/webview_debai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </WebView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp5">
+
+                        <LinearLayout
+                            android:id="@+id/ll_webview_A"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            tools:ignore="WebViewLayout">
+
+                            <ImageView
+                                android:id="@+id/img_checkbox_A"
+                                android:layout_width="@dimen/dp40"
+                                android:layout_height="@dimen/dp40"
+                                android:padding="@dimen/dp5" />
+
+                            <WebView
+                                android:id="@+id/webview_anwser_A"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/dp5">
+
+                            </WebView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_webview_B"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            tools:ignore="WebViewLayout">
+
+                            <ImageView
+                                android:id="@+id/img_checkbox_B"
+                                android:layout_width="@dimen/dp40"
+                                android:layout_height="@dimen/dp40"
+                                android:padding="@dimen/dp5" />
+
+                            <WebView
+                                android:id="@+id/webview_anwser_B"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/dp5">
+
+                            </WebView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp5">
+
+                        <LinearLayout
+                            android:id="@+id/ll_webview_C"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            tools:ignore="WebViewLayout">
+
+                            <ImageView
+                                android:id="@+id/img_checkbox_C"
+                                android:layout_width="@dimen/dp40"
+                                android:layout_height="@dimen/dp40"
+                                android:padding="@dimen/dp5" />
+
+                            <WebView
+                                android:id="@+id/webview_anwser_C"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/dp5">
+
+                            </WebView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_webview_D"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            tools:ignore="WebViewLayout">
+
+                            <ImageView
+                                android:id="@+id/img_checkbox_D"
+                                android:layout_width="@dimen/dp40"
+                                android:layout_height="@dimen/dp40"
+                                android:padding="@dimen/dp5" />
+
+                            <WebView
+                                android:id="@+id/webview_anwser_D"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/dp5">
+
+                            </WebView>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- <android.support.v7.widget.RecyclerView
+                     android:id="@+id/recycle_dapan"
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_marginLeft="@dimen/dp5"
+                     android:layout_weight="4"
+                     android:background="@drawable/spr_bg_cauhoi_congchua"
+                     android:padding="@dimen/dp5" />
+
+                 <ImageView
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1" />-->
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:visibility="gone"
+                android:id="@+id/recycler_dapan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_cauhoi">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    <ImageView
+        android:id="@+id/img_reload"
+        android:layout_width="@dimen/dp30"
+        android:layout_height="@dimen/dp30"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="@dimen/dp5"
+        android:src="@drawable/icon_reload"
+        android:visibility="visible"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_player" />
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/img_anwser_chil"
+        android:layout_width="@dimen/icon_anwser_review"
+        android:layout_height="@dimen/icon_anwser_review"
+        android:layout_marginRight="@dimen/dp5"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/icon_anwser_true"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_lable" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

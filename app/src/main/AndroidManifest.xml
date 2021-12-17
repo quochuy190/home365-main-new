@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="neo.vn.test365children">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<!--    <uses-permission android:name="android.permission.CALL_PHONE" />-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:configChanges="orientation|screenSize"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:windowSoftInputMode="adjustResize">
+        <meta-data
+            android:name="android.webkit.WebView.EnableSafeBrowsing"
+            android:value="false" />
+<!--        <meta-data-->
+<!--            android:name="com.google.android.gms.ads.APPLICATION_ID"-->
+<!--            android:value="ca-app-pub-9286300864046388~2008626214"/>-->
+        <activity
+            android:name=".ActivityDemoDragDropImage"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.VIEW"/>-->
+<!--                <category android:name="android.intent.category.DEFAULT"/>-->
+<!--                <category android:name="android.intent.category.BROWSABLE"/>-->
+<!--                <data-->
+<!--                    android:scheme="home365app"-->
+<!--                    android:host="open"/>-->
+<!--           </intent-filter>-->
+
+        </activity>
+        <activity
+            android:name=".Activity.login.ActivityGuildPractice"
+            android:screenOrientation="sensorLandscape">
+
+        </activity>
+        <activity
+            android:name=".Activity.skill.Activity_Menu_Skill"
+            android:screenOrientation="sensorLandscape">
+
+        </activity>
+        <activity
+            android:name=".Activity.luyenthi.ActivityActiveLuyenthi"
+            android:screenOrientation="sensorLandscape">
+
+        </activity>
+        <activity
+            android:name=".Activity.luyenthi.ActivityListBaitapLuyenthi"
+            android:screenOrientation="sensorLandscape">
+
+        </activity>
+        <activity
+            android:name=".Activity.luyenthi.Activity_Menu_Luyenthi"
+            android:screenOrientation="sensorLandscape">
+
+        </activity>
+        <activity
+            android:name=".Activity.ActivityHome"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.login.ActivityLoginNew"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape">
+
+        </activity>
+        <activity
+            android:name=".Activity.login.ActivityUpdateInforChil"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.login.ActivityWelcomApp"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape">
+
+        </activity>
+        <activity
+            android:name=".MenuSearch.ActivityDanhsachKhoihoc"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".MenuSearch.ActivityListCity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".MenuSearch.ActivityListDistrict"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".MenuSearch.ActivityListSchools"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.game.Activity_Guild_Game"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.untility_menu.Activity_Information"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.untility_menu.Activity_Menu_Untility"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.untility_menu.ActivityUntitiliesDetail"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.ReviewExercises.ActivityBaitapdalam"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.ReviewExercises.ActivityExercisesDetail"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.ReviewExercises.ActivityReviewExercises"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.game.menu_game.ActivityMenuGame"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.game.ActivityGuideGameTPTT"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.game.Activity_startgame_tptt"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.game.sudoku.ActivityStartSudoku"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.game.sudoku.ActivityGamePlaySudoku"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Fragment.ActivityGiaiCuuCongChua"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.game.ActivityGameTrieuphutrithuc"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.game.ActivityGameTinhnhanhNholau"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.game.ActivityStartGameTNNL"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.game.ActivityGameOverTPTT"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+
+        <activity
+            android:name=".Activity.ActivityLogin"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.login.ActivitySelectLevelTry"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.doctruyen.Activity_menu_doctruyen"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.doctruyen.Activity_webview_doctruyen"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode
+            |screenSize|smallestScreenSize|mcc|mnc"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.doctruyen.ActivityWebviewReadStory"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode
+            |screenSize|smallestScreenSize|mcc|mnc"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.ActivityComplete"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.game.game_kow.ActivityKoWStart"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.game.game_kow.ActivityKoWMenuGame"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.game.game_kow.ActivityKoWMenuLevel"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.game.game_kow.ActivityKowPlayEasyGame"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.game.game_kow.ActivityKowPlay_Level_Two"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.doctruyen.Activity_Webview_Edumall"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.doctruyen.Activity_Webview_Kyna"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+
+        <activity
+            android:name=".Activity.game.game_kow.ActivityKoWPlayGame"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.Activity_Welcome"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.ActivityMenuBaitap"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".Activity.ActivityStartBaitap"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".Activity.ActivityLambaitap"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensorLandscape"></activity>
+
+        <service android:name=".Service.MyFirebaseIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Service.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/app_name" />
+        <service android:name=".Service.ServiceDownTime"></service>
+        <service android:name=".Service.BoundServiceCountTime"></service>
+        <service android:name=".Service.ServiceDownTimeGame"></service>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/width_item_menu"
+    android:layout_height="@dimen/width_item_menu"
+    android:layout_margin="@dimen/margin_item">
+
+    <ImageView
+        android:src="@drawable/img_menu_blue"
+        android:id="@+id/img_item_menu_lambai"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical" />
+
+    <TextView
+        android:maxLines="2"
+        android:padding="@dimen/dp5"
+        android:id="@+id/txt_name_menu_lambai"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Tiếng việt - Tuần 1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_menu_baitap" />
+
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" android:shape="ring">
+    <item android:state_pressed="true">
+        <shape>
+            <corners android:radius="2000dp" />
+            <solid android:color="@color/click_infor" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/icon_information"
+        android:state_pressed="false"></item>
+</selector>
