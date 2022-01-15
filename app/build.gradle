@@ -29,18 +29,20 @@ android {
         }
     }
     android {
-//        signingConfigs {
-//            release {
-//                storeFile file('G:/2018/Neo/Project/Test365Home/Build/HOME365KID/home365kid.jks')
-//                storePassword "quochuy101"
-//                keyAlias "home365kid"
-//                keyPassword "quochuy101"
-//            }
-//        }
+        signingConfigs {
+            release {
+                storeFile file('home365kid.jks')
+                storePassword "quochuy101"
+                keyAlias "home365kid"
+                keyPassword "quochuy101"
+            }
+        }
         buildTypes {
-//            release {
-//                signingConfig signingConfigs.release
-//            }
+            release {
+                debuggable true
+                minifyEnabled false
+                signingConfig signingConfigs.release
+            }
         }
     }
     realm {
@@ -83,6 +85,9 @@ dependencies {
     //firebase
     implementation 'com.google.firebase:firebase-core:18.0.0'
     implementation 'com.google.firebase:firebase-messaging:21.0.0'
+    implementation platform('com.google.firebase:firebase-bom:29.0.3')
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.android.gms:play-services-safetynet:18.0.1'
     // Check for v11.4.2 or higher
   //  implementation 'com.google.firebase:firebase-core:16.0.8'
     // Add dependency
@@ -95,6 +100,7 @@ dependencies {
     implementation 'com.yarolegovich:discrete-scrollview:1.4.9'
     implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
     implementation 'org.jsoup:jsoup:1.11.3'
+    implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.2'
     // Executes lint checks from the ':lint' project at build time.
     //Ad mob
 //    implementation 'com.google.android.gms:play-services-ads:19.5.0'
