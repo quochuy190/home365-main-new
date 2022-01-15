@@ -128,15 +128,13 @@
                             android:id="@+id/img_dapan_A_1"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/dp50"
-                            android:layout_centerHorizontal="true"
-                            android:layout_centerVertical="true" />
+                            android:layout_centerInParent="true" />
 
                         <WebView
                             android:id="@+id/webview_dapannoicau_A_1"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_centerVertical="true" />
+                            android:layout_centerInParent="true" />
 
 
                     </RelativeLayout>

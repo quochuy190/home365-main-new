@@ -351,6 +351,7 @@ public class FragmentDocvaTraloiReview extends BaseFragment
                                 break;
                             case R.id.webview_anwser_A:
                                 hideDialogLoading();
+
                                 break;
                             case R.id.webview_anwser_B:
                                 hideDialogLoading();

@@ -272,7 +272,7 @@ public class FragmentXepTrung extends BaseFragment {
     }
 
     private void insertImage() {
-        Glide.with(getActivity()).load(R.drawable.egg_yellow).into(img_trung1);
+        Glide.with(this).load(R.drawable.egg_yellow).into(img_trung1);
         Glide.with(this).load(R.drawable.egg_pink).into(img_trung2);
         Glide.with(this).load(R.drawable.egg_blue).into(img_trung3);
         Glide.with(this).load(R.drawable.egg_red).into(img_trung4);

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <neo.vn.test365children.Activity.CustomViewPager
+    <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager_lambai"
         android:layout_width="0dp"
         android:layout_height="0dp"

@@ -104,7 +104,7 @@ public class ActivityExercisesDetail extends BaseActivity implements ImlExerDeta
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPresenterBaitap = new PresenterBaitap(this);
-//        mRealm = RealmController.with(this).getRealm();
+       // mRealm = RealmController.with(this).getRealm();
         initData();
         initEvent();
     }

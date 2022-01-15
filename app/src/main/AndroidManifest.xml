@@ -28,7 +28,7 @@
 <!--            android:name="com.google.android.gms.ads.APPLICATION_ID"-->
 <!--            android:value="ca-app-pub-9286300864046388~2008626214"/>-->
         <activity
-            android:name=".ActivityDemoDragDropImage"
+            android:name=".Activity.SplashScreen"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="sensorLandscape">
             <intent-filter>
@@ -36,14 +36,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.VIEW"/>-->
-<!--                <category android:name="android.intent.category.DEFAULT"/>-->
-<!--                <category android:name="android.intent.category.BROWSABLE"/>-->
-<!--                <data-->
-<!--                    android:scheme="home365app"-->
-<!--                    android:host="open"/>-->
-<!--           </intent-filter>-->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="home365app"
+                    android:host="open"/>
+           </intent-filter>
 
         </activity>
         <activity

@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import io.realm.Realm;
 import neo.vn.test365children.Adapter.AdapterObjBaitapTuan;
 import neo.vn.test365children.App;
 import neo.vn.test365children.Base.BaseActivity;
@@ -34,12 +35,13 @@ import neo.vn.test365children.Models.TuanDamua;
 import neo.vn.test365children.Presenter.ImpBaitap;
 import neo.vn.test365children.Presenter.PresenterBaitap;
 import neo.vn.test365children.R;
+import neo.vn.test365children.RealmController.RealmController;
 import neo.vn.test365children.Untils.KeyboardUtil;
 import neo.vn.test365children.Untils.SharedPrefs;
 
 public class ActivityBaitapdalam extends BaseActivity implements ImpBaitap.View {
     private static final String TAG = "ActivityBaitapdalam";
-//    Realm mRealm;
+    Realm mRealm;
     AdapterObjBaitapTuan adapter;
     AdapterObjBaitapTuan adapter_TV;
     AdapterObjBaitapTuan adapter_TA;
@@ -49,7 +51,7 @@ public class ActivityBaitapdalam extends BaseActivity implements ImpBaitap.View 
     List<DETAILSItem> mLisTToan;
     List<DETAILSItem> mLisTV;
     List<DETAILSItem> mLisTAnh;
-//    List<ExerciseAnswer> lisExercise;
+    List<ExerciseAnswer> lisExercise;
     @BindView(R.id.recycle_toan)
     RecyclerView recycle_toan;
     @BindView(R.id.recycle_tv)
@@ -78,7 +80,7 @@ public class ActivityBaitapdalam extends BaseActivity implements ImpBaitap.View 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPresenterBaitap = new PresenterBaitap(this);
-//        mRealm = RealmController.with(this).getRealm();
+        mRealm = RealmController.with(this).getRealm();
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -101,40 +103,40 @@ public class ActivityBaitapdalam extends BaseActivity implements ImpBaitap.View 
         mLisTAnh = new ArrayList<>();
         Glide.with(this).load(R.drawable.bg_doc_hieu).into(imageView5);
         mPresenterBaitap.get_excercise_taken(sUserMother, sUserCon);
-//        lisExercise = RealmController.getInstance().getExercises();
-//        if (lisExercise != null)
-//            Log.i(TAG, "initData: " + lisExercise.size());
-//        List<ExerciseAnswer> lisEx = new ArrayList<>();
-//        lisEx = mRealm.where(ExerciseAnswer.class).equalTo("sMonhoc", "1")
-//                .equalTo("sId_userMe", sUserMother)
-//                .equalTo("isTrangthailambai", "3")
-//                .equalTo("sId_userCon", sUserCon).findAll();
-//        List<ExerciseAnswer> lisEx2 = new ArrayList<>();
-//        lisEx2 = mRealm.where(ExerciseAnswer.class).equalTo("sMonhoc", "1")
-//                .equalTo("sId_userMe", sUserMother)
-//                .equalTo("isTrangthailambai", "2")
-//                .equalTo("sId_userCon", sUserCon).findAll();
-//        List<ExerciseAnswer> lisExTV = new ArrayList<>();
-//        lisExTV = mRealm.where(ExerciseAnswer.class).equalTo("sMonhoc", "2")
-//                .equalTo("sId_userMe", sUserMother)
-//                .equalTo("isTrangthailambai", "3")
-//                .equalTo("sId_userCon", sUserCon).findAll();
-//        List<ExerciseAnswer> lisExTV2 = new ArrayList<>();
-//        lisExTV2 = mRealm.where(ExerciseAnswer.class).equalTo("sMonhoc", "2")
-//                .equalTo("sId_userMe", sUserMother)
-//                .equalTo("isTrangthailambai", "2")
-//                .equalTo("sId_userCon", sUserCon).findAll();
-//        List<ExerciseAnswer> lisExTA = new ArrayList<>();
-//        lisExTA = mRealm.where(ExerciseAnswer.class).equalTo("sMonhoc", "3")
-//                .equalTo("sId_userMe", sUserMother)
-//                .equalTo("isTrangthailambai", "3")
-//                .equalTo("sId_userCon", sUserCon).findAll();
-//        List<ExerciseAnswer> lisExTA2 = new ArrayList<>();
-//        lisExTA2 = mRealm.where(ExerciseAnswer.class).equalTo("sMonhoc", "3")
-//                .equalTo("sId_userMe", sUserMother)
-//                .equalTo("isTrangthailambai", "2")
-//                .equalTo("sId_userCon", sUserCon).findAll();
-//        Log.d("my_test", Arrays.toString(lisEx.toArray()));
+        lisExercise = RealmController.getInstance().getExercises();
+        if (lisExercise != null)
+            Log.i(TAG, "initData: " + lisExercise.size());
+        List<ExerciseAnswer> lisEx = new ArrayList<>();
+        lisEx = mRealm.where(ExerciseAnswer.class).equalTo("sMonhoc", "1")
+                .equalTo("sId_userMe", sUserMother)
+                .equalTo("isTrangthailambai", "3")
+                .equalTo("sId_userCon", sUserCon).findAll();
+        List<ExerciseAnswer> lisEx2 = new ArrayList<>();
+        lisEx2 = mRealm.where(ExerciseAnswer.class).equalTo("sMonhoc", "1")
+                .equalTo("sId_userMe", sUserMother)
+                .equalTo("isTrangthailambai", "2")
+                .equalTo("sId_userCon", sUserCon).findAll();
+        List<ExerciseAnswer> lisExTV = new ArrayList<>();
+        lisExTV = mRealm.where(ExerciseAnswer.class).equalTo("sMonhoc", "2")
+                .equalTo("sId_userMe", sUserMother)
+                .equalTo("isTrangthailambai", "3")
+                .equalTo("sId_userCon", sUserCon).findAll();
+        List<ExerciseAnswer> lisExTV2 = new ArrayList<>();
+        lisExTV2 = mRealm.where(ExerciseAnswer.class).equalTo("sMonhoc", "2")
+                .equalTo("sId_userMe", sUserMother)
+                .equalTo("isTrangthailambai", "2")
+                .equalTo("sId_userCon", sUserCon).findAll();
+        List<ExerciseAnswer> lisExTA = new ArrayList<>();
+        lisExTA = mRealm.where(ExerciseAnswer.class).equalTo("sMonhoc", "3")
+                .equalTo("sId_userMe", sUserMother)
+                .equalTo("isTrangthailambai", "3")
+                .equalTo("sId_userCon", sUserCon).findAll();
+        List<ExerciseAnswer> lisExTA2 = new ArrayList<>();
+        lisExTA2 = mRealm.where(ExerciseAnswer.class).equalTo("sMonhoc", "3")
+                .equalTo("sId_userMe", sUserMother)
+                .equalTo("isTrangthailambai", "2")
+                .equalTo("sId_userCon", sUserCon).findAll();
+        // Log.d("my_test", Arrays.toString(lisEx.toArray()));
 //        if (lisEx.size() > 0) {
 //            mLisTToan.addAll(lisEx);
 //        }
@@ -201,9 +203,18 @@ public class ActivityBaitapdalam extends BaseActivity implements ImpBaitap.View 
         adapter.setOnIListener(new setOnItemClickListener() {
             @Override
             public void OnItemClickListener(int position) {
+                if (lisExercise != null) {
+                    for (ExerciseAnswer exe : lisExercise) {
+                        if (exe.getsId_exercise().equals("" + mLisTToan.get(position).getEXERCISEID())) {
+                            set_obj_realm(exe);
+                            App.mLisCauhoi.addAll(exe.getmLisCauhoi());
+                        }
+                    }
+                }
+
                 KeyboardUtil.play_click_button(ActivityBaitapdalam.this);
                 Intent intent = new Intent(ActivityBaitapdalam.this, ActivityExercisesDetail.class);
-                intent.putExtra(Constants.KEY_SEND_EXERCISES_DETAIL, mLisTToan.get(position).getEXERCISEID()+"");
+                intent.putExtra(Constants.KEY_SEND_EXERCISES_DETAIL, mLisTToan.get(position).getEXERCISEID() + "");
 //                intent.putExtra(Constants.KEY_SEND_EXERCISES_DETAIL_STATUS, mLisTToan.get(position).getIsTrangthailambai());
 //                set_obj_realm(mLisTToan.get(position));
 //                App.mLisCauhoi.addAll(mLisTToan.get(position).getmLisCauhoi());
@@ -218,9 +229,17 @@ public class ActivityBaitapdalam extends BaseActivity implements ImpBaitap.View 
         adapter_TV.setOnIListener(new setOnItemClickListener() {
             @Override
             public void OnItemClickListener(int position) {
+                if (lisExercise != null) {
+                    for (ExerciseAnswer exe : lisExercise) {
+                        if (exe.getsId_exercise().equals("" + mLisTV.get(position).getEXERCISEID())) {
+                            set_obj_realm(exe);
+                            App.mLisCauhoi.addAll(exe.getmLisCauhoi());
+                        }
+                    }
+                }
                 KeyboardUtil.play_click_button(ActivityBaitapdalam.this);
                 Intent intent = new Intent(ActivityBaitapdalam.this, ActivityExercisesDetail.class);
-                intent.putExtra(Constants.KEY_SEND_EXERCISES_DETAIL, mLisTV.get(position).getEXERCISEID()+"");
+                intent.putExtra(Constants.KEY_SEND_EXERCISES_DETAIL, mLisTV.get(position).getEXERCISEID() + "");
 //                intent.putExtra(Constants.KEY_SEND_EXERCISES_DETAIL_STATUS, mLisTV.get(position).getIsTrangthailambai());
 //                set_obj_realm(mLisTV.get(position));
 //                App.mLisCauhoi.addAll(mLisTV.get(position).getmLisCauhoi());
@@ -235,9 +254,17 @@ public class ActivityBaitapdalam extends BaseActivity implements ImpBaitap.View 
         adapter_TA.setOnIListener(new setOnItemClickListener() {
             @Override
             public void OnItemClickListener(int position) {
+                if (lisExercise != null) {
+                    for (ExerciseAnswer exe : lisExercise) {
+                        if (exe.getsId_exercise().equals("" + mLisTAnh.get(position).getEXERCISEID())) {
+                            set_obj_realm(exe);
+                            App.mLisCauhoi.addAll(exe.getmLisCauhoi());
+                        }
+                    }
+                }
                 KeyboardUtil.play_click_button(ActivityBaitapdalam.this);
                 Intent intent = new Intent(ActivityBaitapdalam.this, ActivityExercisesDetail.class);
-                intent.putExtra(Constants.KEY_SEND_EXERCISES_DETAIL, mLisTAnh.get(position).getEXERCISEID()+"");
+                intent.putExtra(Constants.KEY_SEND_EXERCISES_DETAIL, mLisTAnh.get(position).getEXERCISEID() + "");
 //                intent.putExtra(Constants.KEY_SEND_EXERCISES_DETAIL_STATUS, mLisTAnh.get(position).getIsTrangthailambai());
 //                //intent.putExtra(Constants.KEY_SEND_EXERCISES_DETAIL_CONTENT, mLisTAnh.get(position).getsDetailExercise());
 //                set_obj_realm(mLisTAnh.get(position));
@@ -316,9 +343,9 @@ public class ActivityBaitapdalam extends BaseActivity implements ImpBaitap.View 
     @Override
     public void showHomeworkDone(HomeworkDone homeworkDone) {
         Log.d("my_test", homeworkDone.toString());
-        if (homeworkDone.getERROR().equals("0000")){
-            for (DETAILSItem item: homeworkDone.getDETAILS()){
-                switch (item.getSUBJECTID()){
+        if (homeworkDone.getERROR().equals("0000")) {
+            for (DETAILSItem item : homeworkDone.getDETAILS()) {
+                switch (item.getSUBJECTID()) {
                     case 1:
                         mLisTToan.add(item);
                         break;
@@ -333,6 +360,21 @@ public class ActivityBaitapdalam extends BaseActivity implements ImpBaitap.View 
             adapter.setData(mLisTToan);
             adapter_TV.setData(mLisTV);
             adapter_TA.setData(mLisTAnh);
+            if (mLisTToan.size() > 0) {
+                txt_montoan.setVisibility(View.VISIBLE);
+            } else {
+                txt_montoan.setVisibility(View.INVISIBLE);
+            }
+            if (mLisTV.size() > 0) {
+                rl_title_tv.setVisibility(View.VISIBLE);
+            } else {
+                rl_title_tv.setVisibility(View.GONE);
+            }
+            if (mLisTAnh.size() > 0) {
+                rl_title_tienganh.setVisibility(View.VISIBLE);
+            } else {
+                rl_title_tienganh.setVisibility(View.GONE);
+            }
         }
     }
 }

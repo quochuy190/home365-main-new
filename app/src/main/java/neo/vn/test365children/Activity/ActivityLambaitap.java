@@ -540,10 +540,8 @@ public class ActivityLambaitap extends BaseActivity implements ImpBaitap.View, M
 
             @Override
             public void onPageScrollStateChanged(int i) {
-
             }
         });
-        viewpager_lambai.setPagingEnabled(false);
     }
 
     private ExerciseAnswer objExer;
@@ -579,6 +577,7 @@ public class ActivityLambaitap extends BaseActivity implements ImpBaitap.View, M
             objExer.setsTimequydinh("" + iTotalTime);
             save_playing_exer();
         }
+        viewpager_lambai.setPagingEnabled(false);
         if (mLisCauhoi != null && mLisCauhoi.size() > 0) {
             //  viewpager_lambai = new CustomViewPager(this);
             adapterViewpager = new AdapterViewpager(getSupportFragmentManager());

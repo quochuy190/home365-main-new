@@ -1,9 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
 apply plugin: 'io.fabric'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
-
 android {
     compileSdkVersion 29
     useLibrary 'org.apache.http.legacy'
@@ -32,14 +29,14 @@ android {
         }
     }
     android {
-        signingConfigs {
+//        signingConfigs {
 //            release {
 //                storeFile file('G:/2018/Neo/Project/Test365Home/Build/HOME365KID/home365kid.jks')
 //                storePassword "quochuy101"
 //                keyAlias "home365kid"
 //                keyPassword "quochuy101"
 //            }
-        }
+//        }
         buildTypes {
 //            release {
 //                signingConfig signingConfigs.release
