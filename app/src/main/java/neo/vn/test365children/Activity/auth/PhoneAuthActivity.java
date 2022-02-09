@@ -41,6 +41,11 @@ public class PhoneAuthActivity extends BaseActivity {
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
 
     @Override
+    public int setContentViewId() {
+        return R.layout.activity_otp_firebase;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
        // setContentView(R.layout.activity_otp_firebase);
@@ -104,10 +109,6 @@ public class PhoneAuthActivity extends BaseActivity {
         });
     }
 
-    @Override
-    public int setContentViewId() {
-        return R.layout.activity_otp_firebase;
-    }
 
     // [START on_start_check_user]
     @Override
