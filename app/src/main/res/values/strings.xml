@@ -101,4 +101,6 @@ Công ty Cổ phần Đầu tư Phát triển Công nghệ và Truyền thông\n
         (3.000đ/ngày) </string>
     <string name="text_benefit1">Được sử dụng tất cả các nội dung bài tập, vui chơi, kỹ năng và ứng dụng Home365.</string>
     <string name="text_benefit2">Mở khóa toàn bộ các đề luyện thi các môn Toán, Tiếng Việt, Tiếng Anh trên hệ thống.</string>
+    <string name="txt_baitaptuan_des">Bài tập được giao lần lượt theo chương trình trên lớp</string>
+    <string name="txt_baitaptuan_lable">Bài tập tuần</string>
 </resources>
