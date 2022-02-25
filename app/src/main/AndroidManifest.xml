@@ -54,6 +54,12 @@
             android:screenOrientation="sensorLandscape">
 
         </activity>
+
+        <activity
+            android:name=".Activity.login.ActivityRegister"
+            android:screenOrientation="sensorLandscape">
+
+        </activity>
         <activity
             android:name=".Activity.skill.Activity_Menu_Skill"
             android:screenOrientation="sensorLandscape">

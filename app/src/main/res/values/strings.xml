@@ -103,4 +103,15 @@ Công ty Cổ phần Đầu tư Phát triển Công nghệ và Truyền thông\n
     <string name="text_benefit2">Mở khóa toàn bộ các đề luyện thi các môn Toán, Tiếng Việt, Tiếng Anh trên hệ thống.</string>
     <string name="txt_baitaptuan_des">Bài tập được giao lần lượt theo chương trình trên lớp</string>
     <string name="txt_baitaptuan_lable">Bài tập tuần</string>
+    <string name="txt_register_guild">Chưa có tài khoản? Đăng ký</string>
+    <string name="txt_login_title">Vui lòng nhập tài khoản của bạn ở đây</string>
+    <string name="txt_register_title">Hoàn thành đăng ký để có hành trình 7 ngày học thử toàn bộ chương trình </string>
+    <string name="lable_fullname">Họ và tên học sinh * </string>
+    <string name="lable_phone">Số điện thoại *</string>
+    <string name="lable_pass">Mật khẩu *</string>
+    <string name="lable_pass_conrifm">Nhập lại mật khẩu *</string>
+    <string name="btn_register">Đăng ký</string>
+    <string name="hint_fullname">Họ và tên</string>
+    <string name="hint_phone">Số điện thoại</string>
+    <string name="hint_pass">Nhập mật khẩu</string>
 </resources>
