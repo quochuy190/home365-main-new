@@ -3,6 +3,7 @@ package neo.vn.test365children.Activity.login;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,14 +29,14 @@ import neo.vn.test365children.Presenter.PresenterLogin;
 import neo.vn.test365children.R;
 import neo.vn.test365children.Untils.SharedPrefs;
 
-public class ActivityRegister extends BaseActivity implements ImlLoginNew.View, ImlLogin.View {
-    PresenterLoginNew mPresenter;
-    PresenterLogin mPresenterLogin;
+public class ActivityRegister extends BaseActivity implements PresenterRegister.View {
+    PresenterRegister mPresenter;
 
-    String sUserMe;
-    String sUserCon;
+    String sFullName;
+    String sPhone;
     String sPassword;
-    String phoneV = "", passV = "";
+    String sPasswordConfirm;
+
     @BindView(R.id.edtFullName)
     EditText edtFullName;
     @BindView(R.id.edtPhone)
@@ -57,47 +58,37 @@ public class ActivityRegister extends BaseActivity implements ImlLoginNew.View, 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mPresenter = new PresenterLoginNew(this);
-        mPresenterLogin = new PresenterLogin(this);
+        mPresenter = new PresenterRegister(this);
     }
 
 
-    private void login() {
-        if (edtFullName.getText().toString().trim().length() > 0 && edtPhone.getText().toString().length() > 0
-                && edtPass.getText().toString().length() > 0  && edtPassConfirm.getText().toString().length() > 0
-        ) {
-            showDialogLoading();
-            phoneV = edtPhone.getText().toString().trim();
-            passV = edtPass.getText().toString();
-            mPresenterLogin.apiLoginVip(phoneV, passV, "", "");
+    private void register() {
+        sPhone = edtPhone.getText().toString().trim();
+        sPassword = edtPass.getText().toString();
+        sFullName = edtFullName.getText().toString().trim();
+        sPasswordConfirm = edtPassConfirm.getText().toString().trim();
+        if (sFullName.isEmpty()){
+            showAlertDialog(getString(R.string.notify),
+                    getString(R.string.error_fullname));
+            return;
         }
-    }
-
-    @Override
-    public void show_api_login(ResponInitChil mLis) {
-    }
-
-    @Override
-    public void show_api_login(ObjLogin mLis) {
-        hideDialogLoading();
-
-    }
-
-    @Override
-    public void show_update_infochil(ErrorApi obj) {
-
-    }
-
-    @Override
-    public void show_error_api(ErrorApi mLis) {
-        hideDialogLoading();
-        showAlertErrorNetwork();
-    }
-
-    @Override
-    public void show_api_login_Vip(ObjLoginVip loginVip) {
-        hideDialogLoading();
-
+        if (sPhone.isEmpty()){
+            showAlertDialog(getString(R.string.notify),
+                    getString(R.string.error_phone));
+            return;
+        }
+        if (sPassword.isEmpty()){
+            showAlertDialog(getString(R.string.notify),
+                    getString(R.string.error_pass));
+            return;
+        }
+        if (sPasswordConfirm.isEmpty()){
+            showAlertDialog(getString(R.string.notify),
+                    getString(R.string.error_pass_confirm));
+            return;
+        }
+        String id = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
+        mPresenter.apiRegister(sFullName, sPhone, sPassword, id);
     }
 
     @Override
@@ -106,14 +97,7 @@ public class ActivityRegister extends BaseActivity implements ImlLoginNew.View, 
         switch (requestCode) {
             case Constants.RequestCode.START_USER_TRY:
                 if (resultCode == RESULT_OK) {
-//                    showDialogLoading();
-                    sUserMe = SharedPrefs.getInstance().get(Constants.KEY_USER_ME, String.class);
-                    sUserCon = SharedPrefs.getInstance().get(Constants.KEY_USER_CON, String.class);
-                    sPassword = SharedPrefs.getInstance().get(Constants.KEY_PASSWORD, String.class);
-                    mPresenterLogin.api_login_restful(sUserMe, sUserCon, sPassword);
-//                    mPresenter_init.api_update_info_chil(sUserMe, sUserCon, "", App.sLevel, "",
-//                            "", "", sPassword, "", "", "");
-//                    check_update_token_push();
+
                 }
                 break;
             case Constants.RequestCode.START_UPDATE_INFOR_CHILD:
@@ -130,7 +114,7 @@ public class ActivityRegister extends BaseActivity implements ImlLoginNew.View, 
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnRegister:
-                login();
+                register();
                 break;
             case R.id.txtLogin:
                 startActivity(new Intent(ActivityRegister.this, ActivityLogin.class));
@@ -141,5 +125,25 @@ public class ActivityRegister extends BaseActivity implements ImlLoginNew.View, 
                 finish();
                 break;
         }
+    }
+
+    @Override
+    public void onHideProgressDialog() {
+        hideDialogLoading();
+    }
+
+    @Override
+    public void onShowProgressDialog() {
+        showDialogLoading();
+    }
+
+    @Override
+    public void showErrorRegister(String error) {
+        showAlertDialog(getString(R.string.error), error);
+    }
+
+    @Override
+    public void showSuccessRegister() {
+
     }
 }

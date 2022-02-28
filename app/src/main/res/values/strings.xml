@@ -114,4 +114,8 @@ Công ty Cổ phần Đầu tư Phát triển Công nghệ và Truyền thông\n
     <string name="hint_fullname">Họ và tên</string>
     <string name="hint_phone">Số điện thoại</string>
     <string name="hint_pass">Nhập mật khẩu</string>
+    <string name="error_fullname">Bạn chưa nhập vào họ tên</string>
+    <string name="error_phone">Bạn chưa nhập vào số điện thoại</string>
+    <string name="error_pass">Bạn chưa nhập vào mật khẩu</string>
+    <string name="error_pass_confirm">Bạn chưa nhập vào xác nhận mật khẩu</string>
 </resources>

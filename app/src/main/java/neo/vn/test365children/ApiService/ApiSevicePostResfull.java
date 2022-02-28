@@ -25,7 +25,7 @@ public interface ApiSevicePostResfull {
     @FormUrlEncoded
     @Headers("content-type: application/x-www-form-urlencoded")
     @POST("/{service}")
-    Call<ResponseBody> getApiServiceRest(@Path("service") String service, @FieldMap Map<String, String> data);
+    Call<ResponseBody> getApiServiceRest(@Path(value = "service", encoded = true) String service, @FieldMap Map<String, String> data);
 
     final OkHttpClient okHttpClient = new OkHttpClient.Builder()
             .connectTimeout(20, TimeUnit.SECONDS)
