@@ -127,6 +127,18 @@
                 android:textColorHint="@color/gray"
                 android:textSize="@dimen/text_login" />
 
+            <ImageView
+                android:id="@+id/img_user_pass"
+                android:layout_width="@dimen/dp30"
+                android:layout_height="@dimen/dp30"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp5"
+                android:padding="@dimen/dp5"
+                android:src="@drawable/ic_eye_hide"
+                android:tint="@color/gray" />
+
         </RelativeLayout>
 
         <TextView

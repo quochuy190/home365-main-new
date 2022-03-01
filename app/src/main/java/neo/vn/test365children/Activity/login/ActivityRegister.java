@@ -4,6 +4,8 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -49,6 +51,12 @@ public class ActivityRegister extends BaseActivity implements PresenterRegister.
     Button btnRegister;
     @BindView(R.id.txtLogin)
     TextView txtLogin;
+    @BindView(R.id.imgPass)
+    ImageView imgPass;
+    @BindView(R.id.imgPassConfirm)
+    ImageView imgPassConfirm;
+    Boolean isShowPw = false;
+    Boolean getIsShowPwConfirm = false;
 
     @Override
     public int setContentViewId() {
@@ -59,6 +67,39 @@ public class ActivityRegister extends BaseActivity implements PresenterRegister.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPresenter = new PresenterRegister(this);
+        imgPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (isShowPw) {
+                    imgPass.setImageResource(R.drawable.ic_eye_hide);
+                    edtPass.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    edtPass.setSelection(edtPass.getText().length());
+                    isShowPw = false;
+                } else {
+                    imgPass.setImageResource(R.drawable.ic_eye_show);
+                    edtPass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    edtPass.setSelection(edtPass.getText().length());
+                    isShowPw = true;
+                }
+            }
+        });
+
+        imgPassConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (getIsShowPwConfirm) {
+                    imgPassConfirm.setImageResource(R.drawable.ic_eye_hide);
+                    edtPassConfirm.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    edtPassConfirm.setSelection(edtPassConfirm.getText().length());
+                    getIsShowPwConfirm = false;
+                } else {
+                    imgPassConfirm.setImageResource(R.drawable.ic_eye_show);
+                    edtPassConfirm.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    edtPassConfirm.setSelection(edtPassConfirm.getText().length());
+                    getIsShowPwConfirm = true;
+                }
+            }
+        });
     }
 
 

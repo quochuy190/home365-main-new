@@ -168,8 +168,8 @@ public class ActivityHome extends BaseActivity implements View.OnClickListener,
             check_notify_update_child();
         }
         // Animation();
-        check_update_token_push();
-        check_init_login();
+       // check_update_token_push();
+       // check_init_login();
         initCheckExerPlaying();
         //  initConfig();
         //initData();

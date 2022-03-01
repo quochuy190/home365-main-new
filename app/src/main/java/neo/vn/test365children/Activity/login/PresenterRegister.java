@@ -75,6 +75,7 @@ public class PresenterRegister {
                 mView.onHideProgressDialog();
                 ResponRegister resData = new Gson().fromJson(objT, ResponRegister.class);
                 if (resData.getError().equals("0000")){
+
                     mView.showSuccessRegister();
                 }else {
                     mView.showErrorRegister(resData.getMessage());

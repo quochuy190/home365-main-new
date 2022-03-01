@@ -25,7 +25,7 @@
         android:background="@drawable/spr_bg_login"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHeight_percent="0.85"
+        app:layout_constraintHeight_percent="0.9"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -73,7 +73,7 @@
             android:layout_height="0dp"
             android:background="@drawable/spr_login_edt"
             app:layout_constraintEnd_toStartOf="@+id/llPhone"
-            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintHeight_percent="0.13"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtLableFullName">
@@ -116,7 +116,7 @@
             android:layout_height="0dp"
             android:background="@drawable/spr_login_edt"
             app:layout_constraintStart_toEndOf="@+id/llFullName"
-            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintHeight_percent="0.13"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtLablePhone">
@@ -161,7 +161,7 @@
             android:layout_height="0dp"
             android:background="@drawable/spr_login_edt"
             app:layout_constraintEnd_toStartOf="@+id/llPhone"
-            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintHeight_percent="0.13"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtPass">
@@ -181,7 +181,17 @@
                 android:textColor="@color/black"
                 android:textColorHint="@color/gray"
                 android:textSize="@dimen/text_login" />
-
+            <ImageView
+                android:id="@+id/imgPass"
+                android:layout_width="@dimen/dp30"
+                android:layout_height="@dimen/dp30"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp5"
+                android:padding="@dimen/dp5"
+                android:src="@drawable/ic_eye_hide"
+                android:tint="@color/gray" />
         </RelativeLayout>
 
         <TextView
@@ -206,7 +216,7 @@
             android:layout_height="0dp"
             android:background="@drawable/spr_login_edt"
             app:layout_constraintStart_toEndOf="@+id/llFullName"
-            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintHeight_percent="0.13"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/llPass">
@@ -227,6 +237,17 @@
                 android:textColorHint="@color/gray"
                 android:textSize="@dimen/text_login" />
 
+            <ImageView
+                android:id="@+id/imgPassConfirm"
+                android:layout_width="@dimen/dp30"
+                android:layout_height="@dimen/dp30"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp5"
+                android:padding="@dimen/dp5"
+                android:src="@drawable/ic_eye_hide"
+                android:tint="@color/gray" />
         </RelativeLayout>
 
 
@@ -266,14 +287,13 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     <ImageView
-
         android:id="@+id/imgBack"
         android:layout_width="@dimen/dp40"
         android:layout_height="@dimen/dp40"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/ic_back_new"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
