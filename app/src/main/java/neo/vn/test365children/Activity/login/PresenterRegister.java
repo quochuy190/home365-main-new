@@ -75,7 +75,9 @@ public class PresenterRegister {
                 mView.onHideProgressDialog();
                 ResponRegister resData = new Gson().fromJson(objT, ResponRegister.class);
                 if (resData.getError().equals("0000")){
-
+                    if (resData.getInfo()!=null){
+                        SharedPrefs.getInstance().put(Constants.KEY_SAVE_CHIL,resData.getInfo() );
+                    }
                     mView.showSuccessRegister();
                 }else {
                     mView.showErrorRegister(resData.getMessage());
