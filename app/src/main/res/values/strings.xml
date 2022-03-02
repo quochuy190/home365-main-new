@@ -118,4 +118,7 @@ Công ty Cổ phần Đầu tư Phát triển Công nghệ và Truyền thông\n
     <string name="error_phone">Bạn chưa nhập vào số điện thoại</string>
     <string name="error_pass">Bạn chưa nhập vào mật khẩu</string>
     <string name="error_pass_confirm">Bạn chưa nhập vào xác nhận mật khẩu</string>
+    <string name="input_otp">Nhập mã OTP</string>
+    <string name="lable_otp">Mã OTP</string>
+    <string name="input_otp_phone">Nhập mã OTP vừa được gửi tới số điện thoại bạn vừa đăng ký</string>
 </resources>

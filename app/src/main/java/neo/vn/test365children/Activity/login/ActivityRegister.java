@@ -1,4 +1,4 @@
-package neo.vn.test365children.Activity.login;
+    package neo.vn.test365children.Activity.login;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -94,6 +94,7 @@ public class ActivityRegister extends BaseActivity implements PresenterRegister.
                     getIsShowPwConfirm = false;
                 } else {
                     imgPassConfirm.setImageResource(R.drawable.ic_eye_show);
+
                     edtPassConfirm.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
                     edtPassConfirm.setSelection(edtPassConfirm.getText().length());
                     getIsShowPwConfirm = true;
