@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -159,7 +160,7 @@ public class ActivityRegister extends BaseActivity implements PresenterRegister.
                 register();
                 break;
             case R.id.txtLogin:
-                startActivity(new Intent(ActivityRegister.this, ActivityLogin.class));
+                startActivity(new Intent(ActivityRegister.this, ActivityLoginNew.class));
                 finish();
                 break;
             case R.id.imgBack:
@@ -186,6 +187,8 @@ public class ActivityRegister extends BaseActivity implements PresenterRegister.
 
     @Override
     public void showSuccessRegister() {
-
+        Toast.makeText(this, "Đăng ký thành công", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(ActivityRegister.this, ActivityLoginNew.class));
+        finish();
     }
 }

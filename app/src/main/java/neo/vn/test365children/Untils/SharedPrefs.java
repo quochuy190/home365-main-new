@@ -10,6 +10,7 @@ public class SharedPrefs {
 
   private static final String PREFS_NAME = "Test365.HomeVip";
   public static final String LANGUAGE = "langauge";
+  public static final String KEY_SAVE_INFO = "KEY_SAVE_INFO";
 
   private static SharedPrefs mInstance;
   private SharedPreferences mSharedPreferences;

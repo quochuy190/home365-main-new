@@ -11,6 +11,8 @@ public class ResponRegister {
     private String error;
     @SerializedName("message")
     private String message;
+    @SerializedName("info")
+    private ResponInitChil info;
 
     public String getError() {
         return error;
@@ -26,5 +28,13 @@ public class ResponRegister {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public ResponInitChil getInfo() {
+        return info;
+    }
+
+    public void setInfo(ResponInitChil info) {
+        this.info = info;
     }
 }
