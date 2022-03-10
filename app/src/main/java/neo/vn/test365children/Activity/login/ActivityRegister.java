@@ -68,6 +68,8 @@ public class ActivityRegister extends BaseActivity implements PresenterRegister.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPresenter = new PresenterRegister(this);
+        String sPhone = getIntent().getStringExtra("phone");
+        edtPhone.setText(sPhone);
         imgPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -95,7 +97,6 @@ public class ActivityRegister extends BaseActivity implements PresenterRegister.
                     getIsShowPwConfirm = false;
                 } else {
                     imgPassConfirm.setImageResource(R.drawable.ic_eye_show);
-
                     edtPassConfirm.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
                     edtPassConfirm.setSelection(edtPassConfirm.getText().length());
                     getIsShowPwConfirm = true;

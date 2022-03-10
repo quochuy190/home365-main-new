@@ -2,10 +2,7 @@ package neo.vn.test365children.Activity.login;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.text.SpannableString;
-import android.text.style.ImageSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,11 +10,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
-import androidx.core.content.ContextCompat;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 import neo.vn.test365children.Activity.ActivityHome;
+import neo.vn.test365children.Activity.login.auth.PhoneAuthActivity;
 import neo.vn.test365children.Base.BaseActivity;
 import neo.vn.test365children.Config.Constants;
 import neo.vn.test365children.Listener.ClickDialog;
@@ -245,7 +242,7 @@ public class ActivityLoginNew extends BaseActivity implements ImlLoginNew.View, 
                 finish();
                 break;
             case R.id.txtRegister:
-                startActivity(new Intent(ActivityLoginNew.this, ActivityRegister.class));
+                startActivity(new Intent(ActivityLoginNew.this, PhoneAuthActivity.class));
                 finish();
                 break;
         }

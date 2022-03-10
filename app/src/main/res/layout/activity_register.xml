@@ -122,6 +122,8 @@
             app:layout_constraintTop_toBottomOf="@+id/txtLablePhone">
 
             <EditText
+                android:enabled="false"
+                android:focusable="false"
                 android:id="@+id/edtPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -133,7 +135,7 @@
                 android:imeOptions="flagNoFullscreen|actionNext"
                 android:inputType="number"
                 android:padding="@dimen/dp7"
-                android:textColor="@color/black"
+                android:textColor="@color/gray_text"
                 android:textColorHint="@color/gray"
                 android:textSize="@dimen/text_login" />
 
