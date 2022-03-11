@@ -131,8 +131,8 @@
     <dimen name="icon_stt_bxh">45dp</dimen>
     <!--Chỉnh sửa bắt sâu-->
     <dimen name="btn_showpoint_width">250dp</dimen>
-    <dimen name="btn_showpoint_hight">40dp</dimen>
-    <dimen name="txt_showpoint">16sp</dimen>
+    <dimen name="btn_showpoint_hight">45dp</dimen>
+    <dimen name="txt_showpoint">17sp</dimen>
     <!--Game tính nhanh nhớ lâu-->
     <dimen name="hight_point_time_tnnl">80dp</dimen>
     <dimen name="icon_time_game_tnnl">70dp</dimen>

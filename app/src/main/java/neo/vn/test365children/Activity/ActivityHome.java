@@ -52,6 +52,7 @@ import neo.vn.test365children.Activity.login.ActivityUpdateInforChil;
 import neo.vn.test365children.Activity.luyenthi.Activity_Menu_Luyenthi;
 import neo.vn.test365children.Activity.skill.Activity_Menu_Skill;
 import neo.vn.test365children.Activity.untility_menu.Activity_Information;
+import neo.vn.test365children.Activity.weeklyExercises.ActivityWeeklyExer;
 import neo.vn.test365children.Adapter.AdapterUserLogin;
 import neo.vn.test365children.App;
 import neo.vn.test365children.Base.BaseActivity;
@@ -724,23 +725,25 @@ public class ActivityHome extends BaseActivity implements View.OnClickListener,
                 startActivity(intent);*/
                 break;
             case R.id.btn_lambaitap:
-                chil = SharedPrefs.getInstance().get(Constants.KEY_SAVE_CHIL, ObjLogin.class);
-                if (chil != null) {
-                    if (chil != null && chil.getsObjInfoKid().getsLEVEL_ID() != null &&
-                            !chil.getsObjInfoKid().getsLEVEL_ID().equals("0")) {
-                        boolean is_start_practice = SharedPrefs.getInstance().get(Constants.KEY_IS_START_PRACTICE, Boolean.class);
-                        if (is_start_practice) {
-                            startActivity(new Intent(ActivityHome.this, ActivityMenuBaitap.class));
-                        } else {
-                            Intent intent = new Intent(ActivityHome.this, ActivityGuildPractice.class);
-                            intent.putExtra(Constants.KEY_SEND_OPTION_GUILD, Constants.KEY_VALUE_GUIL_PRACTICE);
-                            startActivity(intent);
-                        }
-                    } else {
-                        start_get_class();
-                        //  Toast.makeText(this, "Thiếu level id", Toast.LENGTH_SHORT).show();
-                    }
-                }
+//                chil = SharedPrefs.getInstance().get(Constants.KEY_SAVE_CHIL, ObjLogin.class);
+//                if (chil != null) {
+//                    if (chil != null && chil.getsObjInfoKid().getsLEVEL_ID() != null &&
+//                            !chil.getsObjInfoKid().getsLEVEL_ID().equals("0")) {
+//                        boolean is_start_practice = SharedPrefs.getInstance().get(Constants.KEY_IS_START_PRACTICE, Boolean.class);
+//                        if (is_start_practice) {
+//                            startActivity(new Intent(ActivityHome.this, ActivityMenuBaitap.class));
+//                        } else {
+//                            Intent intent = new Intent(ActivityHome.this, ActivityGuildPractice.class);
+//                            intent.putExtra(Constants.KEY_SEND_OPTION_GUILD, Constants.KEY_VALUE_GUIL_PRACTICE);
+//                            startActivity(intent);
+//                        }
+//                    } else {
+//                        start_get_class();
+//                        //  Toast.makeText(this, "Thiếu level id", Toast.LENGTH_SHORT).show();
+//                    }
+//                }
+
+                startActivity(new Intent(ActivityHome.this, ActivityWeeklyExer.class));
 
 
                 break;
