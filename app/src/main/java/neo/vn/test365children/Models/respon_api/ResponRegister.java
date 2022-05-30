@@ -7,10 +7,12 @@ import java.util.List;
 import neo.vn.test365children.Models.ObjLessonSkill;
 
 public class ResponRegister {
-    @SerializedName("error")
+    @SerializedName("ERROR")
     private String error;
-    @SerializedName("message")
+    @SerializedName("MESSAGE")
     private String message;
+    @SerializedName("RESULT")
+    private String RESULT;
     @SerializedName("info")
     private ResponInitChil info;
 
@@ -36,5 +38,13 @@ public class ResponRegister {
 
     public void setInfo(ResponInitChil info) {
         this.info = info;
+    }
+
+    public String getRESULT() {
+        return RESULT;
+    }
+
+    public void setRESULT(String RESULT) {
+        this.RESULT = RESULT;
     }
 }

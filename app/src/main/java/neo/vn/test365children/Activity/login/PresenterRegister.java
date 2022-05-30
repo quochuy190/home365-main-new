@@ -49,17 +49,19 @@ public class PresenterRegister {
 
         final Map<String, String> mMap = new LinkedHashMap<>();
         String sTokenkey = SharedPrefs.getInstance().get(Constants.KEY_TOKEN, String.class);
-        String sService = "child/init";
-        mMap.put("FULL_NAME", fullName);
+        String sService = "/child/init";
         mMap.put("PHONE", phone);
-        mMap.put("PASSWORD", pass);
-        mMap.put("CONFIRM_PASSWORD", pass);
+        mMap.put("PASS", pass);
         mMap.put("APP_VERSION", BuildConfig.VERSION_NAME);
-        mMap.put("DEVICE_MODEL",  android.os.Build.BRAND + " " + android.os.Build.MODEL);
+        mMap.put("DEVICE_MODEL",  android.os.Build.BRAND + "_" + android.os.Build.MODEL);
         mMap.put("DEVICE_TYPE", "2");
         mMap.put("OS_VERSION", android.os.Build.VERSION.RELEASE);
-        mMap.put("TOKEN_KEY", sTokenkey);
+        if (sTokenkey!=null&&sTokenkey.length()>0){
+            mMap.put("TOKEN_KEY", sTokenkey);
+        }else
+            mMap.put("TOKEN_KEY", "tokenkeytestdsfdsjlajfdaadfjdlajdfadsffsfsgsgj");
         mMap.put("UUID", uuid);
+        mMap.put("PARENT_ID", "");
         mView.onShowProgressDialog();
         mApiService.getApiPostResfull(new CallbackData<String>() {
             @Override
@@ -80,7 +82,7 @@ public class PresenterRegister {
                     }
                     mView.showSuccessRegister();
                 }else {
-                    mView.showErrorRegister(resData.getMessage());
+                    mView.showErrorRegister(resData.getRESULT());
                 }
                // mView.show_api_login(objLogin);
             }

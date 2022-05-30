@@ -129,8 +129,6 @@ public class PresenterLogin implements ImlLogin.Presenter {
         String sService = "serviceLogin";
         mMap.put("MSISDN", phone);
         mMap.put("PASSWORD", password);
-        mMap.put("PARENTID", idParent);
-        mMap.put("USERCHILD", codeStudent);
         mApiService.getApiPostResfull(new CallbackData<String>() {
             @Override
             public void onGetDataSuccess(String objT) {

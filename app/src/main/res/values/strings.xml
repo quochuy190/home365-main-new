@@ -48,6 +48,8 @@ Mỗi tuần chỉ chơi một lần vào bất kỳ ngày nào.
     <string name="txt_title_select_sub">SELECT TOPIC</string>
     <string name="txt_quenmatkhau"><b><u><i>Quên mã học sinh</i></u></b></string>
     <string name="txt_dangky">Đăng ký tài khoản</string>
+    <string name="txt_login">Đăng nhập</string>
+    <string name="txt_login_guild">Đã có tài khoản, Đăng nhập</string>
     <string name="txt_content_feedback">Cảm ơn con, hãy giữ kiên trì rèn luyện hàng ngày  cùng Home365 để đạt được thành công nhé.
 </string>
     <string name="txt_guild_login_content">Việc đăng ký tài khoản con được thực hiện trên app mẹ có tên là Home365. Mẹ tải app Home365 về máy để tạo tài khoản và tải bài tập cho con nhé.</string>
@@ -125,4 +127,7 @@ Công ty Cổ phần Đầu tư Phát triển Công nghệ và Truyền thông\n
     <string name="input_otp_phone">Nhập mã OTP vừa được gửi tới số điện thoại bạn vừa đăng ký: </string>
     <string name="input_phone_lable">Nhập vào số điện thoại để xác thực đăng ký tài khoản</string>
     <string name="error_phone_length">Nhập vào số điện thoại để xác thực đăng ký tài khoản</string>
+    <string name="title_change_pass">Đổi mật khẩu</string>
+    <string name="txt_luyenthi_lable">Bài tập tuần</string>
+    <string name="txt_kynang_lable">Bài tập tuần</string>
 </resources>

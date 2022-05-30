@@ -25,166 +25,111 @@
         android:background="@drawable/spr_bg_login"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHeight_percent="0.9"
+        app:layout_constraintHeight_percent="0.8"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent="0.8">
+        app:layout_constraintWidth_percent="0.6">
 
         <TextView
-            android:gravity="center"
-            android:ellipsize="end"
-            android:maxLines="2"
             android:textStyle="bold"
-            android:layout_marginTop="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp10"
             android:padding="@dimen/dp5"
             android:id="@+id/txtTitleLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/txt_register_title"
+            android:text="@string/title_change_pass"
             android:textColor="@color/white"
-            android:textSize="@dimen/text_15sp"
+            android:textSize="@dimen/text_14sp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHeight_percent="0.12"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintEnd_toEndOf="parent"
             />
-
-        <TextView
-            android:layout_marginTop="@dimen/dp15"
-            android:id="@+id/txtLableFullName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/spr_click_textview"
-            android:paddingVertical="@dimen/dp5"
-            android:text="@string/lable_fullname"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_12sp"
-            android:textStyle="normal"
-            android:visibility="visible"
-            app:layout_constraintStart_toStartOf="@id/llFullName"
-            app:layout_constraintTop_toBottomOf="@+id/txtTitleLogin" />
         <RelativeLayout
-            android:id="@+id/llFullName"
-
-            app:layout_constraintWidth_percent="0.4"
+            android:id="@+id/llUserName"
+            android:layout_marginTop="@dimen/dp10"
+            app:layout_constraintWidth_percent="0.8"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/spr_login_edt"
-            app:layout_constraintEnd_toStartOf="@+id/llPhone"
-            app:layout_constraintHeight_percent="0.13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.15"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtLableFullName">
+            app:layout_constraintTop_toBottomOf="@+id/txtTitleLogin">
+
+            <ImageView
+                android:id="@+id/img_user_con"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp5"
+                android:padding="@dimen/dp5"
+                android:src="@drawable/icon_password" />
 
             <EditText
-                android:id="@+id/edtFullName"
+                android:id="@+id/edt_user_con"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/dp5"
+                android:layout_toRightOf="@id/img_user_con"
                 android:background="@color/white"
                 android:backgroundTint="@color/white"
-                android:hint="@string/hint_fullname"
-                android:imeOptions="flagNoFullscreen|actionNext"
-                android:inputType="text"
+                android:hint="Mật khẩu cũ"
+                android:imeOptions="flagNoFullscreen|actionDone"
+                android:inputType="number"
                 android:padding="@dimen/dp7"
                 android:textColor="@color/black"
                 android:textColorHint="@color/gray"
                 android:textSize="@dimen/text_login" />
 
         </RelativeLayout>
-        <TextView
-            android:layout_marginTop="@dimen/dp15"
-            android:id="@+id/txtLablePhone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/spr_click_textview"
-            android:paddingVertical="@dimen/dp5"
-            android:text="@string/lable_phone"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_12sp"
-            android:textStyle="normal"
-            android:visibility="visible"
-            app:layout_constraintStart_toStartOf="@id/llPhone"
-            app:layout_constraintTop_toBottomOf="@+id/txtTitleLogin" />
-        <RelativeLayout
-            android:id="@+id/llPhone"
-            app:layout_constraintWidth_percent="0.4"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:background="@drawable/spr_login_edt"
-            app:layout_constraintStart_toEndOf="@+id/llFullName"
-            app:layout_constraintHeight_percent="0.13"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtLablePhone">
-
-            <EditText
-                android:enabled="true"
-                android:focusable="true"
-                android:id="@+id/edtPhone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="@dimen/dp5"
-                android:background="@color/white"
-                android:backgroundTint="@color/white"
-                android:hint="@string/hint_phone"
-                android:imeOptions="flagNoFullscreen|actionNext"
-                android:inputType="number"
-                android:padding="@dimen/dp7"
-                android:textColor="@color/gray_text"
-                android:textColorHint="@color/gray"
-                android:textSize="@dimen/text_login" />
-
-        </RelativeLayout>
-
-        <TextView
-            android:layout_marginTop="@dimen/dp15"
-            android:id="@+id/txtPass"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/spr_click_textview"
-            android:paddingVertical="@dimen/dp5"
-            android:text="@string/lable_pass"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_12sp"
-            android:textStyle="normal"
-            android:visibility="visible"
-            app:layout_constraintStart_toStartOf="@id/llPass"
-            app:layout_constraintTop_toBottomOf="@+id/llFullName" />
 
         <RelativeLayout
+            app:layout_constraintWidth_percent="0.8"
             android:id="@+id/llPass"
-            app:layout_constraintWidth_percent="0.4"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/spr_login_edt"
-            app:layout_constraintEnd_toStartOf="@+id/llPhone"
-            app:layout_constraintHeight_percent="0.13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.15"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtPass">
+            app:layout_constraintTop_toBottomOf="@+id/llUserName">
+
+            <ImageView
+                android:id="@+id/imgPassWord"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp5"
+                android:padding="@dimen/dp5"
+                android:src="@drawable/icon_password" />
 
             <EditText
-                android:id="@+id/edtPass"
+                android:focusable="true"
+                android:id="@+id/edt_user_pass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/dp5"
+                android:layout_toRightOf="@id/imgPassWord"
                 android:background="@color/white"
                 android:backgroundTint="@color/white"
-                android:hint="@string/hint_pass"
-                android:imeOptions="flagNoFullscreen|actionNext"
+                android:hint="Mật khẩu mới"
+                android:imeOptions="flagNoFullscreen|actionDone"
                 android:inputType="textPassword"
                 android:padding="@dimen/dp7"
                 android:textColor="@color/black"
                 android:textColorHint="@color/gray"
                 android:textSize="@dimen/text_login" />
+
             <ImageView
-                android:id="@+id/imgPass"
+                android:id="@+id/img_user_pass"
                 android:layout_width="@dimen/dp30"
                 android:layout_height="@dimen/dp30"
                 android:layout_alignParentRight="true"
@@ -194,44 +139,42 @@
                 android:padding="@dimen/dp5"
                 android:src="@drawable/ic_eye_hide"
                 android:tint="@color/gray" />
+
         </RelativeLayout>
 
-        <TextView
-            android:layout_marginTop="@dimen/dp15"
-            android:id="@+id/txtPassConfirm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/spr_click_textview"
-            android:paddingVertical="@dimen/dp5"
-            android:text="@string/lable_pass_conrifm"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_12sp"
-            android:textStyle="normal"
-            android:visibility="visible"
-            app:layout_constraintStart_toStartOf="@id/llPassConfirm"
-            app:layout_constraintTop_toBottomOf="@+id/llFullName" />
-
         <RelativeLayout
+            app:layout_constraintWidth_percent="0.8"
             android:id="@+id/llPassConfirm"
-            app:layout_constraintWidth_percent="0.4"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/spr_login_edt"
-            app:layout_constraintStart_toEndOf="@+id/llFullName"
-            app:layout_constraintHeight_percent="0.13"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/llPass">
+            app:layout_constraintHeight_percent="0.15"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llPass">
+
+            <ImageView
+                android:id="@+id/imgPassWordConFirm"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp5"
+                android:padding="@dimen/dp5"
+                android:src="@drawable/icon_password" />
 
             <EditText
+                android:focusable="true"
                 android:id="@+id/edtPassConfirm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/dp5"
+                android:layout_toRightOf="@id/imgPassWordConFirm"
                 android:background="@color/white"
                 android:backgroundTint="@color/white"
-                android:hint="@string/hint_pass"
+                android:hint="Mật khẩu mới"
                 android:imeOptions="flagNoFullscreen|actionDone"
                 android:inputType="textPassword"
                 android:padding="@dimen/dp7"
@@ -250,20 +193,23 @@
                 android:padding="@dimen/dp5"
                 android:src="@drawable/ic_eye_hide"
                 android:tint="@color/gray" />
+
         </RelativeLayout>
 
 
+
         <Button
-            android:layout_marginTop="@dimen/dp15"
-            android:id="@+id/btnRegister"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="@dimen/dp20"
+            android:id="@+id/img_dangnhap"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/spr_button_oragen_click"
             android:fontFamily="@font/roboto_bold"
-            android:text="@string/btn_register"
+            android:text="Đổi mật khâu"
             android:textColor="@color/white"
             android:textSize="@dimen/text_login"
-            app:layout_constraintTop_toBottomOf="@+id/llPass"
+            app:layout_constraintTop_toBottomOf="@+id/llPassConfirm"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHeight_percent="0.15"
@@ -274,13 +220,13 @@
         <TextView
             android:layout_marginTop="@dimen/dp5"
             android:padding="@dimen/dp5"
-            android:id="@+id/txtLogin"
+            android:id="@+id/txtRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/txt_login_guild"
+            android:text="@string/txt_register_guild"
             android:textColor="@color/white"
             android:textSize="@dimen/text_14sp"
-            app:layout_constraintTop_toBottomOf="@+id/btnRegister"
+            app:layout_constraintTop_toBottomOf="@+id/img_dangnhap"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHeight_percent="0.12"
             app:layout_constraintHorizontal_bias="0.5"
@@ -289,13 +235,14 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     <ImageView
+
         android:id="@+id/imgBack"
         android:layout_width="@dimen/dp40"
         android:layout_height="@dimen/dp40"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/ic_back_new"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

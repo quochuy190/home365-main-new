@@ -14,7 +14,6 @@ import androidx.annotation.Nullable;
 import butterknife.BindView;
 import butterknife.OnClick;
 import neo.vn.test365children.Activity.ActivityHome;
-import neo.vn.test365children.Activity.login.auth.PhoneAuthActivity;
 import neo.vn.test365children.Base.BaseActivity;
 import neo.vn.test365children.Config.Constants;
 import neo.vn.test365children.Listener.ClickDialog;
@@ -28,9 +27,8 @@ import neo.vn.test365children.Presenter.PresenterLogin;
 import neo.vn.test365children.R;
 import neo.vn.test365children.Untils.SharedPrefs;
 
-public class ActivityLoginNew extends BaseActivity implements ImlLoginNew.View, ImlLogin.View {
-    PresenterLoginNew mPresenter;
-    PresenterLogin mPresenterLogin;
+public class ActivityForgotPass extends BaseActivity implements ImlLoginNew.View, ImlLogin.View {
+    PresenterChangePass mPresenter;
     String sUserMe;
     String sUserCon;
     String sPassword;
@@ -56,8 +54,7 @@ public class ActivityLoginNew extends BaseActivity implements ImlLoginNew.View, 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mPresenter = new PresenterLoginNew(this);
-        mPresenterLogin = new PresenterLogin(this);
+
         loadView();
     }
 
@@ -65,12 +62,14 @@ public class ActivityLoginNew extends BaseActivity implements ImlLoginNew.View, 
 
     }
 
-    private void login() {
+    private void changePass() {
+        sUserMe = SharedPrefs.getInstance().get(Constants.KEY_USER_ME, String.class);
+        sUserCon = SharedPrefs.getInstance().get(Constants.KEY_USER_CON, String.class);
+        sPassword = SharedPrefs.getInstance().get(Constants.KEY_PASSWORD, String.class);
         if (edtPhoneLogin.getText().toString().trim().length() > 0 && edtPassLoginVip.getText().toString().length() > 0) {
             showDialogLoading();
             phoneV = edtPhoneLogin.getText().toString().trim();
             passV = edtPassLoginVip.getText().toString();
-            mPresenterLogin.apiLoginVip(phoneV, passV, "", "");
         }
     }
 
@@ -90,7 +89,7 @@ public class ActivityLoginNew extends BaseActivity implements ImlLoginNew.View, 
             showDialogComfirm("Thông báo", mLis.getsRESULT(), false, new ClickDialog() {
                 @Override
                 public void onClickYesDialog() {
-                    startActivity(new Intent(ActivityLoginNew.this, ActivityHome.class));
+                    startActivity(new Intent(ActivityForgotPass.this, ActivityHome.class));
                     finish();
                 }
 
@@ -130,12 +129,9 @@ public class ActivityLoginNew extends BaseActivity implements ImlLoginNew.View, 
                     SharedPrefs.getInstance().put(Constants.IS_VIP, true);
                     SharedPrefs.getInstance().put(Constants.PHONE_VIP, phoneV);
                     SharedPrefs.getInstance().put(Constants.PASSWORD_VIP, passV);
-                    sUserMe = SharedPrefs.getInstance().get(Constants.KEY_USER_ME, String.class);
-                    sUserCon = SharedPrefs.getInstance().get(Constants.KEY_USER_CON, String.class);
-                    sPassword = SharedPrefs.getInstance().get(Constants.KEY_PASSWORD, String.class);
-                    mPresenterLogin.api_login_restful(sUserMe, sUserCon, sPassword);
+
                 } else {
-                    Intent intent = new Intent(ActivityLoginNew.this, ActivitySelectLevelTry.class);
+                    Intent intent = new Intent(ActivityForgotPass.this, ActivitySelectLevelTry.class);
                     startActivityForResult(intent, Constants.RequestCode.START_USER_TRY);
                 }
 
@@ -153,7 +149,6 @@ public class ActivityLoginNew extends BaseActivity implements ImlLoginNew.View, 
                     sUserMe = SharedPrefs.getInstance().get(Constants.KEY_USER_ME, String.class);
                     sUserCon = SharedPrefs.getInstance().get(Constants.KEY_USER_CON, String.class);
                     sPassword = SharedPrefs.getInstance().get(Constants.KEY_PASSWORD, String.class);
-                    mPresenterLogin.api_login_restful(sUserMe, sUserCon, sPassword);
 //                    mPresenter_init.api_update_info_chil(sUserMe, sUserCon, "", App.sLevel, "",
 //                            "", "", sPassword, "", "", "");
 //                    check_update_token_push();
@@ -232,17 +227,17 @@ public class ActivityLoginNew extends BaseActivity implements ImlLoginNew.View, 
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.img_dangnhap:
-                login();
+
                 break;
             case R.id.txtForgotPass:
                 forgotPass();
                 break;
             case R.id.imgBack:
-                startActivity(new Intent(ActivityLoginNew.this, ActivityHome.class));
+                startActivity(new Intent(ActivityForgotPass.this, ActivityHome.class));
                 finish();
                 break;
             case R.id.txtRegister:
-                startActivity(new Intent(ActivityLoginNew.this, ActivityRegister.class));
+                startActivity(new Intent(ActivityForgotPass.this, ActivityRegister.class));
                 finish();
                 break;
         }
