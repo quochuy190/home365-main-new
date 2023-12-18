@@ -209,6 +209,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ic_back_login" />
 
     <TextView
+        android:visibility="invisible"
         android:id="@+id/tv_register_vip_2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

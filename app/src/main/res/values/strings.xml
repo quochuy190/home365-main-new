@@ -128,6 +128,8 @@ Công ty Cổ phần Đầu tư Phát triển Công nghệ và Truyền thông\n
     <string name="input_phone_lable">Nhập vào số điện thoại để xác thực đăng ký tài khoản</string>
     <string name="error_phone_length">Nhập vào số điện thoại để xác thực đăng ký tài khoản</string>
     <string name="title_change_pass">Đổi mật khẩu</string>
-    <string name="txt_luyenthi_lable">Bài tập tuần</string>
-    <string name="txt_kynang_lable">Bài tập tuần</string>
+    <string name="txt_luyenthi_lable">Luyện thi</string>
+    <string name="txt_kynang_lable">Kỹ năng</string>
+    <string name="txt_luyenthi_des">Bài tập luyện thi giúp tổng hợp ôn tập kiến thức</string>
+    <string name="txt_kynang_des">Các khóa kỹ năng giúp nâng cao kiến thức và hiểu biết của trẻ</string>
 </resources>

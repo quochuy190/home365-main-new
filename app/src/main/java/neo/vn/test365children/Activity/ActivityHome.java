@@ -44,6 +44,7 @@ import butterknife.BindView;
 import de.hdodenhof.circleimageview.CircleImageView;
 import io.realm.Realm;
 import io.realm.RealmList;
+import neo.vn.test365children.Activity.doctruyen.ActivityWebviewPolicy;
 import neo.vn.test365children.Activity.game.menu_game.ActivityMenuGame;
 import neo.vn.test365children.Activity.login.ActivityGuildPractice;
 import neo.vn.test365children.Activity.login.ActivityLoginNew;
@@ -101,32 +102,37 @@ public class ActivityHome extends BaseActivity implements View.OnClickListener,
         ImlListSticker.View, ImpBaitap.View, ImlLogin.View, Iml_init.View {
     private static final String TAG = "ActivityHome";
     @BindView(R.id.btn_lambaitap)
-    ConstraintLayout btn_lambaitap;
-//    @BindView(R.id.btn_ketquahoctap)
-//    Button btn_ketquahoctap;
-//    @BindView(R.id.btn_vuichoi)
-//    Button btn_vuichoi;
-//    @BindView(R.id.btn_luyenthi)
-//    Button btn_luyenthi;
+    Button btn_lambaitap;
+    @BindView(R.id.btn_ketquahoctap)
+    Button btn_ketquahoctap;
+    @BindView(R.id.btn_vuichoi)
+    Button btn_vuichoi;
+    @BindView(R.id.btn_luyenthi)
+    Button btn_luyenthi;
 /*    @BindView(R.id.btn_bxh)
     Button btn_bxh;*/
+    @BindView(R.id.btn_utilities)
+    Button btn_utilities;
+    @BindView(R.id.img_mute)
+    ImageView img_mute;
     @BindView(R.id.img_background)
     ImageView img_background;
-    @BindView(R.id.tvNameHome)
-    TextView tvNameHome;
-    @BindView(R.id.tvLeverHome)
-    TextView tvLeverHome;
-    @BindView(R.id.imgAvataHome)
-    ImageView img_avata;
-
+    @BindView(R.id.tv_title_bar)
+    TextView tv_title_bar;
+    @BindView(R.id.img_avata)
+    CircleImageView img_avata;
+    @BindView(R.id.btn_information)
+    CircleImageView btn_information;
     @BindView(R.id.ll_show_multil_user)
     ConstraintLayout ll_show_multil_user;
     @BindView(R.id.img_exit_ll_show)
     ImageView img_exit_ll_show;
     @BindView(R.id.img_back_ll_user)
     ImageView img_back_ll_user;
-    @BindView(R.id.imgChangeLever)
+    @BindView(R.id.img_change_child)
     ImageView img_change_child;
+//    @BindView(R.id.btn_policy)
+//    ImageView btnPolicy;
     Realm mRealm;
     PresenterSticker mPresenter;
     PresenterBaitap mPresenterBaitap;
@@ -157,16 +163,16 @@ public class ActivityHome extends BaseActivity implements View.OnClickListener,
         boolean is_check_update = SharedPrefs.getInstance().get(Constants.KEY_SAVE_UPDATE_INFOR_CHILD_SUCCESS, Boolean.class);
         //Check multil user login
         lisUserLoginRealm = mRealm.where(InfoKids.class).findAll();
-//        if (lisUserLoginRealm != null && lisUserLoginRealm.size() > 1) {
-//            txt_add_user.setText("Đổi tài khoản");
-//        } else {
-//            txt_add_user.setText("Thêm tài khoản");
-//        }
+        if (lisUserLoginRealm != null && lisUserLoginRealm.size() > 1) {
+            txt_add_user.setText("Đổi tài khoản");
+        } else {
+            txt_add_user.setText("Thêm tài khoản");
+        }
         if (!is_check_update) {
             check_notify_update_child();
         }
         // Animation();
-       // check_update_token_push();
+        check_update_token_push();
         check_init_login();
         initCheckExerPlaying();
         //  initConfig();
@@ -202,6 +208,10 @@ public class ActivityHome extends BaseActivity implements View.OnClickListener,
     AdapterUserLogin adapter;
     @BindView(R.id.recycle_multil_user)
     RecyclerView recycle_multil_user;
+    @BindView(R.id.img_face)
+    ImageView img_face;
+    @BindView(R.id.img_groupface)
+    ImageView img_groupface;
     List<InfoKids> lisUserLogin;
 
     private void init_get_multil_user() {
@@ -502,22 +512,16 @@ public class ActivityHome extends BaseActivity implements View.OnClickListener,
             mRealm.commitTransaction();
             if (obj.getsFULLNAME() != null && obj.getsFULLNAME().length() > 0) {
                 if (obj.getsLEVEL_ID() == null || obj.getsLEVEL_ID().length() == 0 || obj.getsLEVEL_ID().equals("0")) {
-                    tvNameHome.setText("MHS: "+obj.getsID());
-                    tvLeverHome.setText("Lớp:");
+                    tv_title_bar.setText(obj.getsFULLNAME());
                 } else {
-                    tvNameHome.setText("MHS: "+obj.getsID());
-                    tvLeverHome.setText("Lớp: "+obj.getsLEVEL_ID());
+                    tv_title_bar.setText(obj.getsFULLNAME() + " - Lớp " + obj.getsLEVEL_ID());
                 }
             } else {
                 if (obj.getsUSERNAME() != null)
                     if (obj.getsLEVEL_ID() == null || obj.getsLEVEL_ID().length() == 0 || obj.getsLEVEL_ID().equals("0")) {
-                       // tv_title_bar.setText("Mã HS: " + obj.getsUSERNAME());
-                        tvNameHome.setText("MHS: "+obj.getsID());
-                        tvLeverHome.setText("Lớp:");
+                        tv_title_bar.setText("Mã HS: " + obj.getsUSERNAME());
                     } else {
-                        //tv_title_bar.setText("Mã HS: " + obj.getsUSERNAME() + " - Lớp " + obj.getsLEVEL_ID());
-                        tvNameHome.setText("MHS: "+obj.getsID());
-                        tvLeverHome.setText("Lớp: "+obj.getsLEVEL_ID());
+                        tv_title_bar.setText("Mã HS: " + obj.getsUSERNAME() + " - Lớp " + obj.getsLEVEL_ID());
                     }
             }
 
@@ -525,7 +529,7 @@ public class ActivityHome extends BaseActivity implements View.OnClickListener,
                 Glide.with(this)
                         .load(Config.URL_IMAGE + chil.getsObjInfoKid().getsAVATAR())
                         .asBitmap()
-                        .placeholder(R.drawable.ic_avata_home)
+                        .placeholder(R.drawable.icon_avata)
                         .into(new BitmapImageViewTarget(img_avata) {
                             @Override
                             public void onResourceReady(Bitmap drawable, GlideAnimation anim) {
@@ -535,9 +539,9 @@ public class ActivityHome extends BaseActivity implements View.OnClickListener,
                         });
             } else {
                 Glide.with(this)
-                        .load(R.drawable.ic_avata_home)
+                        .load(R.drawable.icon_avata)
                         .asBitmap()
-                        .placeholder(R.drawable.ic_avata_home)
+                        .placeholder(R.drawable.icon_avata)
                         .into(new BitmapImageViewTarget(img_avata) {
                             @Override
                             public void onResourceReady(Bitmap drawable, GlideAnimation anim) {
@@ -567,24 +571,61 @@ public class ActivityHome extends BaseActivity implements View.OnClickListener,
         mPlayClick.start();
     }
 
-//    @BindView(R.id.txt_add_user)
-//    TextView txt_add_user;
+    @BindView(R.id.txt_add_user)
+    TextView txt_add_user;
 
     @Override
     public int setContentViewId() {
-        return R.layout.activity_home_ver2;
+        return R.layout.activity_home;
     }
 
     private void initEvent() {
+        img_face.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String sPage = "434531697078487";
+                StringUtil.start_facebook(ActivityHome.this, sPage);
+            }
+        });
+        img_groupface.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String id = "2053079854714200";
+              //  StringUtil.start_facebook(ActivityHome.this, sPage);
+                final String urlFb = "fb://group/" + id;
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(urlFb));
+
+                // If a Facebook app is installed, use it. Otherwise, launch
+                // a browser
+                final PackageManager packageManager = getPackageManager();
+                List<ResolveInfo> list =
+                        packageManager.queryIntentActivities(intent,
+                                PackageManager.MATCH_DEFAULT_ONLY);
+                if (list.size() == 0) {
+                    final String urlBrowser = "https://www.facebook.com/group/" + id;
+                    intent.setData(Uri.parse(urlBrowser));
+                }
+                startActivity(intent);
+            }
+        });
 
         img_exit_ll_show.setOnClickListener(this);
         //  img_switch.setOnClickListener(this);
         btn_lambaitap.setOnClickListener(this);
-//        btn_luyenthi.setOnClickListener(this);
-//        btn_ketquahoctap.setOnClickListener(this);
-//        btn_vuichoi.setOnClickListener(this);
+        btn_luyenthi.setOnClickListener(this);
+        btn_ketquahoctap.setOnClickListener(this);
+        btn_vuichoi.setOnClickListener(this);
         img_change_child.setOnClickListener(this);
        // btn_bxh.setOnClickListener(this);
+        btn_utilities.setOnClickListener(this);
+        btn_information.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                play_click();
+                startActivity(new Intent(ActivityHome.this, Activity_Information.class));
+            }
+        });
         btn_call.setOnClickListener(v -> {
 //                StringUtil.call_phone(ActivityHome.this, "0845600365");
             Intent callIntent = new Intent(Intent.ACTION_DIAL);
@@ -613,6 +654,48 @@ public class ActivityHome extends BaseActivity implements View.OnClickListener,
                         });
             }
         });*/
+        img_mute.setOnClickListener(v -> {
+//                play_click();
+//                init_get_multil_user();
+//                show_multil_user();
+            if (SharedPrefs.getInstance().get(Constants.IS_VIP, Boolean.class)){
+//                builder.setTitle("Thông báo");
+//                builder.setMessage("Bạn đã là Vip");
+//                builder.setNegativeButton("Trở về", (dialog, which) -> {
+//
+//                });
+//                builder.setPositiveButton("Đăng nhập bằng tài khoản khác", (dialog, which) -> {
+//                    SharedPrefs.getInstance().put(Constants.KEY_SAVE_COUNT_START_EXER, "" + 0);
+//                    startActivity(new Intent(ActivityHome.this, ActivityLoginNew.class));
+//                    gone_multil_user();
+//                    finish();
+//                });
+//                builder.show();
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                View inflater = LayoutInflater.from(this).inflate(R.layout.layout_show_image, null);
+                ImageView imageView = inflater.findViewById(R.id.img_show);
+                ImageView imageClose = inflater.findViewById(R.id.ic_close_info_vip);
+//                if (typeVip.equals("EVH")) Glide.with(this).load(R.drawable.info_vip).into(imageView);
+//                else Glide.with(this).load(R.drawable.info_vip).into(imageView);
+                Glide.with(this).load(R.drawable.info_vip).into(imageView);
+                builder.setView(inflater);
+                Dialog dialogAlert = builder.create();
+                dialogAlert.show();
+                Objects.requireNonNull(dialogAlert.getWindow()).setBackgroundDrawableResource(android.R.color.transparent);
+                imageClose.setOnClickListener(img-> dialogAlert.dismiss());
+                Button logout= inflater.findViewById(R.id.button_logout);
+                logout.setOnClickListener(btn->{
+                    SharedPrefs.getInstance().clear();
+                    startActivity(new Intent(ActivityHome.this, ActivityLoginNew.class));
+                    finish();
+                });
+            }else {
+                SharedPrefs.getInstance().put(Constants.KEY_SAVE_COUNT_START_EXER, "" + 0);
+                startActivity(new Intent(ActivityHome.this, ActivityLoginNew.class));
+                gone_multil_user();
+                finish();
+            }
+        });
     }
 
 //    private void showChildChoose(){
@@ -633,38 +716,38 @@ public class ActivityHome extends BaseActivity implements View.OnClickListener,
                 init_get_multil_user();
                 show_multil_user();
                 break;*/
-            case R.id.imgChangeLever:
+            case R.id.img_change_child:
                 showChooseClass();
                 break;
             case R.id.img_exit_ll_show:
                 gone_multil_user();
                 break;
-            case R.id.imgAvataHome:
+            case R.id.img_avata:
                 v.startAnimation(AnimationUtils.loadAnimation(this, R.anim.click_animation));
                 start_update_infor_child();
                 /*Intent intent = new Intent(ActivityHome.this, ActivityUpdateInforChil.class);
                 startActivity(intent);*/
                 break;
             case R.id.btn_lambaitap:
-//                chil = SharedPrefs.getInstance().get(Constants.KEY_SAVE_CHIL, ObjLogin.class);
-//                if (chil != null) {
-//                    if (chil != null && chil.getsObjInfoKid().getsLEVEL_ID() != null &&
-//                            !chil.getsObjInfoKid().getsLEVEL_ID().equals("0")) {
-//                        boolean is_start_practice = SharedPrefs.getInstance().get(Constants.KEY_IS_START_PRACTICE, Boolean.class);
-//                        if (is_start_practice) {
-//                            startActivity(new Intent(ActivityHome.this, ActivityMenuBaitap.class));
-//                        } else {
-//                            Intent intent = new Intent(ActivityHome.this, ActivityGuildPractice.class);
-//                            intent.putExtra(Constants.KEY_SEND_OPTION_GUILD, Constants.KEY_VALUE_GUIL_PRACTICE);
-//                            startActivity(intent);
-//                        }
-//                    } else {
-//                        start_get_class();
-//                        //  Toast.makeText(this, "Thiếu level id", Toast.LENGTH_SHORT).show();
-//                    }
-//                }
+                chil = SharedPrefs.getInstance().get(Constants.KEY_SAVE_CHIL, ObjLogin.class);
+                if (chil != null) {
+                    if (chil != null && chil.getsObjInfoKid().getsLEVEL_ID() != null &&
+                            !chil.getsObjInfoKid().getsLEVEL_ID().equals("0")) {
+                        boolean is_start_practice = SharedPrefs.getInstance().get(Constants.KEY_IS_START_PRACTICE, Boolean.class);
+                        if (is_start_practice) {
+                            startActivity(new Intent(ActivityHome.this, ActivityMenuBaitap.class));
+                        } else {
+                            Intent intent = new Intent(ActivityHome.this, ActivityGuildPractice.class);
+                            intent.putExtra(Constants.KEY_SEND_OPTION_GUILD, Constants.KEY_VALUE_GUIL_PRACTICE);
+                            startActivity(intent);
+                        }
+                    } else {
+                        start_get_class();
+                        //  Toast.makeText(this, "Thiếu level id", Toast.LENGTH_SHORT).show();
+                    }
+                }
 
-                startActivity(new Intent(ActivityHome.this, ActivityMenuBaitap.class));
+                //startActivity(new Intent(ActivityHome.this, ActivityMenuBaitap.class));
 
 
                 break;
@@ -802,6 +885,7 @@ public class ActivityHome extends BaseActivity implements View.OnClickListener,
     private void gone_multil_user() {
         ll_show_multil_user.setVisibility(View.GONE);
         //ll_show_multil_user.startAnimation(AnimationUtils.loadAnimation(this, R.anim.animation_show_question));
+        btn_luyenthi.setVisibility(View.VISIBLE);
         btn_lambaitap.setVisibility(View.VISIBLE);
         button_login_vip.setVisibility(View.VISIBLE);
     }
@@ -1115,10 +1199,10 @@ public class ActivityHome extends BaseActivity implements View.OnClickListener,
                     InfoKids child = mLis.getsObjInfoKid();
                     if (child.getsPARENT_ID()!=null) idUserMe = child.getsPARENT_ID();
                     if (child.getVIP_NAME()!=null) typeVip =child.getVIP_NAME();
-//                    if (SharedPrefs.getInstance().get(Constants.IS_VIP, Boolean.class)){
-//                        if (child.getIS_VIP() == 0) Glide.with(this).load(R.drawable.vip_inactive).into(img_mute);
-//                        if (child.getIS_VIP() == 1) Glide.with(this).load(R.drawable.vip_active).into(img_mute);
-//                    }
+                    if (SharedPrefs.getInstance().get(Constants.IS_VIP, Boolean.class)){
+                        if (child.getIS_VIP() == 0) Glide.with(this).load(R.drawable.vip_inactive).into(img_mute);
+                        if (child.getIS_VIP() == 1) Glide.with(this).load(R.drawable.vip_active).into(img_mute);
+                    }
                 }
                 show_info_kid();
                 String sToken_push = SharedPrefs.getInstance().get(Constants.KEY_TOKEN, String.class);

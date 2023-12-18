@@ -275,7 +275,7 @@ public class Activity_webview_doctruyen extends BaseActivity {
         webSettings.setTextZoom((int) (webSettings.getTextZoom() * 1.1));
         webSettings.setBuiltInZoomControls(true);
         webSettings.setAllowFileAccess(true);
-        webSettings.setAppCacheEnabled(true);
+       // webSettings.setAppCacheEnabled(true);
         webSettings.setJavaScriptEnabled(true);
         webSettings.setDomStorageEnabled(true);
         webView.requestFocusFromTouch();

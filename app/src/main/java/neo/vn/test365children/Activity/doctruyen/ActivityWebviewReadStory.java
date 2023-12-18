@@ -48,7 +48,8 @@ public class ActivityWebviewReadStory extends BaseActivity {
     private String sUrlEng = "https://doctruyen.home365.online/en/";
     private String sUrlVie = "https://doctruyen.home365.online/vn/";
     private String sUrlGift = "https://vuonqua.home365.online/";
-    private String sUrlBCT = "http://online.gov.vn/HomePage/CustomAppDisplay.aspx?DocId=488";
+    //private String sUrlBCT = "http://online.gov.vn/HomePage/CustomAppDisplay.aspx?DocId=488";
+    private String sUrlBCT = "http://online.gov.vn/Home/WebDetails/88671";
     private String sUrl_policy = "https://home365.online/dieu-khoan/";
     private String sUrl_web = "https://home365.online/";
     String sUserMother, sUserChil, sPass, sUrl;
@@ -255,7 +256,7 @@ public class ActivityWebviewReadStory extends BaseActivity {
         webSettings.setTextZoom((int) (webSettings.getTextZoom() * 1.1));
         webSettings.setBuiltInZoomControls(true);
         webSettings.setAllowFileAccess(true);
-        webSettings.setAppCacheEnabled(true);
+        //webSettings.setAppCacheEnabled(true);
         webSettings.setJavaScriptEnabled(true);
         webSettings.setDomStorageEnabled(true);
         webView.requestFocusFromTouch();

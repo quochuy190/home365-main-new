@@ -2,7 +2,10 @@ package neo.vn.test365children.Activity.login;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.style.ImageSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,11 +13,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 import neo.vn.test365children.Activity.ActivityHome;
-import neo.vn.test365children.Activity.login.auth.PhoneAuthActivity;
 import neo.vn.test365children.Base.BaseActivity;
 import neo.vn.test365children.Config.Constants;
 import neo.vn.test365children.Listener.ClickDialog;
@@ -31,26 +34,49 @@ import neo.vn.test365children.Untils.SharedPrefs;
 public class ActivityLoginNew extends BaseActivity implements ImlLoginNew.View, ImlLogin.View {
     PresenterLoginNew mPresenter;
     PresenterLogin mPresenterLogin;
+//    @BindView(R.id.img_dangnhap)
+//    Button btn_login;
+//    @BindView(R.id.btn_try)
+//    Button btn_register;
+//    @BindView(R.id.edt_user_con)
+//    EditText edt_user_con;
+//    @BindView(R.id.txt_hotline)
+//    TextView txt_hotline;
+//    @BindView(R.id.imageView)
+//    ImageView imageView;
+//    @BindView(R.id.imageView4)
+//    ImageView img_broad;
+//    @BindView(R.id.edt_user_pass)
+//    EditText edt_user_pass;
+
     String sUserMe;
     String sUserCon;
     String sPassword;
     String phoneV = "", passV = "";
-    @BindView(R.id.edt_user_con)
-    EditText edtPhoneLogin;
-    @BindView(R.id.edt_user_pass)
+    @BindView(R.id.img_cloud)
+    ImageView imgCloud;
+    @BindView(R.id.edt_phone_login_vip)
+    EditText edtPhoneLoginVip;
+    @BindView(R.id.edt_pass_login_vip)
     EditText edtPassLoginVip;
-    @BindView(R.id.img_dangnhap)
+    @BindView(R.id.button_login_vip)
     Button buttonLoginVip;
-    @BindView(R.id.txtForgotPass)
+    @BindView(R.id.tv_forgot_pass_login_vip)
     TextView tvForgotPassLoginVip;
-    @BindView(R.id.imgBack)
+    @BindView(R.id.ic_back_login)
     ImageView icBackLogin;
-    @BindView(R.id.txtRegister)
-    TextView tvRegister;
+    @BindView(R.id.tv_register_vip_1)
+    TextView tvRegisterVip1;
+    @BindView(R.id.tv_register_vip_2)
+    TextView tvRegisterVip2;
+    @BindView(R.id.tv_benefit_1)
+    TextView tvBenefit1;
+    @BindView(R.id.tv_benefit_2)
+    TextView tvBenefit2;
 
     @Override
     public int setContentViewId() {
-        return R.layout.activity_login_new;
+        return R.layout.layout_login_new_2;
     }
 
     @Override
@@ -58,17 +84,41 @@ public class ActivityLoginNew extends BaseActivity implements ImlLoginNew.View, 
         super.onCreate(savedInstanceState);
         mPresenter = new PresenterLoginNew(this);
         mPresenterLogin = new PresenterLogin(this);
+
+//        Glide.with(this).load(R.drawable.img_backround_login).into(imageView);
+//        Glide.with(this).load(R.drawable.login_broad).into(img_broad);
+//        initEvent();
         loadView();
     }
 
     private void loadView() {
+//        Glide.with(this).load(R.drawable.login_cloud).into(imgCloud);
 
+        Drawable drawable = ContextCompat.getDrawable(this, R.drawable.register_vip_1);
+        int lineHeight = tvRegisterVip1.getLineHeight();
+        drawable.setBounds(0, 0, lineHeight * 3, lineHeight);
+
+        ImageSpan imageSpan = new ImageSpan(drawable, ImageSpan.ALIGN_BASELINE);
+        String text = " ";
+        SpannableString spannableString = new SpannableString(text);
+        spannableString.setSpan(imageSpan, text.length() - 1, text.length(), 0);
+        tvRegisterVip1.append(spannableString);
+//        tvRegisterVip1.setMovementMethod(LinkMovementMethod.getInstance());
+
+        Drawable drawable2 = ContextCompat.getDrawable(this, R.drawable.register_vip_1_1);
+        int lineHeight2 = tvRegisterVip2.getLineHeight();
+        drawable2.setBounds(0, 0, lineHeight2 * 3, lineHeight2);
+        ImageSpan imageSpan2 = new ImageSpan(drawable2, ImageSpan.ALIGN_BASELINE);
+        String text2 = " ";
+        SpannableString spannableString2 = new SpannableString(text2);
+        spannableString2.setSpan(imageSpan2, text2.length() - 1, text2.length(), 0);
+        tvRegisterVip2.append(spannableString2);
     }
 
     private void login() {
-        if (edtPhoneLogin.getText().toString().trim().length() > 0 && edtPassLoginVip.getText().toString().length() > 0) {
+        if (edtPhoneLoginVip.getText().toString().trim().length() > 0 && edtPassLoginVip.getText().toString().length() > 0) {
             showDialogLoading();
-            phoneV = edtPhoneLogin.getText().toString().trim();
+            phoneV = edtPhoneLoginVip.getText().toString().trim();
             passV = edtPassLoginVip.getText().toString();
             mPresenterLogin.apiLoginVip(phoneV, passV, "", "");
         }
@@ -228,22 +278,24 @@ public class ActivityLoginNew extends BaseActivity implements ImlLoginNew.View, 
         });
     }
 
-    @OnClick({R.id.img_dangnhap, R.id.txtForgotPass, R.id.imgBack, R.id.txtRegister})
+    @OnClick({R.id.button_login_vip, R.id.tv_forgot_pass_login_vip, R.id.ic_back_login, R.id.tv_register_vip_1, R.id.tv_register_vip_2})
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.img_dangnhap:
+            case R.id.button_login_vip:
                 login();
                 break;
-            case R.id.txtForgotPass:
+            case R.id.tv_forgot_pass_login_vip:
                 forgotPass();
                 break;
-            case R.id.imgBack:
+            case R.id.ic_back_login:
                 startActivity(new Intent(ActivityLoginNew.this, ActivityHome.class));
                 finish();
                 break;
-            case R.id.txtRegister:
-                startActivity(new Intent(ActivityLoginNew.this, ActivityRegister.class));
-                finish();
+            case R.id.tv_register_vip_1:
+                registerVip1("DK H365", "9285");
+                break;
+            case R.id.tv_register_vip_2:
+                registerVip1("XN H365", "9285");
                 break;
         }
     }
